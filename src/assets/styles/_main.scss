@@ -1,0 +1,168 @@
+@import './reset';
+@import './variables/variables';
+@font-face {
+    font-family: "Montserrat-Regular";
+    src: url("./fonts/Montserrat/Montserrat-Regular.ttf");
+}
+
+*{
+    font-family: 'Montserrat-Regular';
+}
+
+
+
+
+
+.main-container{
+ width: 1360px ;
+ margin: 0px auto;
+}
+
+.link{
+    font-size: $primary-font-h5;
+    color: $primary-text-light;
+    font-family: 'Montserrat-Regular' ;
+    &:hover, &:focus, &:active{
+        color: #FFC85E;
+    }
+}
+
+.nav-link{
+    color: white;
+    &:hover, &:focus, &:active{
+        color: #FFC85E;
+    }
+}
+
+.navigate-menu-search{
+    color: $background-light-grey;   
+}
+
+h3{
+    font-size: $primary-font-h3 ;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+::placeholder{
+    color: white;
+}
+
+.table{
+    height: 300px;
+
+    thead{
+        background-color: #f4f4f4;
+    }
+
+    tbody{
+
+        p{
+            font-size: 12px;
+            margin-bottom: -5px;
+        }
+
+        span{
+            font-size: 14px;
+            font-weight: 700;
+        }
+
+        button{
+            border: none;
+            background-color: black;
+            border-radius: 3px;
+            width: 80px;
+            height: 40px;
+            color: white;
+        }
+
+    }
+}
+
+.addProduct{
+    width: 200px;
+    height: 40px;
+    background-color: #FFBB55;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    margin-top: 30px;
+}
+
+.group{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 10px;
+
+    &-input{
+        width: 45%;
+        margin-bottom: 8px;
+    }
+
+    input{
+        width: 100%;
+    }
+}
+
+.btnPrimary{
+    width: 83px;
+    height: 40px;
+    font-size: 13px;
+    font-weight: bold;
+    color: white;
+    background-color: $primary-button-color;
+    border-radius: 3px;
+    border: none;
+}
+
+.btnPrimary-basket{
+    width: 184px;
+    height: 60px;
+    font-size: 13px;
+    font-weight: bold;
+    color: white;
+    background-color: $primary-button-color;
+    border-radius: 3px;
+    border: none;
+
+  
+}
+
+.btnPrimary-order{
+    width: 100%;
+    height: 64px;
+    font-size: 13px;
+    font-weight: bold;
+    color: white;
+    background-color: $primary-button-color;
+    border-radius: 3px;
+    border: none;
+    
+    &:disabled{
+        opacity: 50%;
+    }
+
+    &:hover{
+        background-color: #FFC85E;
+    }
+
+    &:active{
+        background-color: #F4A835;
+    }
+
+   
+}
+
+.btnPrimary-cart{
+    width: 186px;
+    height: 60px;
+    font-size: 13px;
+    font-weight: bold;
+    color: white;
+    background-color: $primary-button-color;
+    border-radius: 3px;
+    border: none;
+}
+

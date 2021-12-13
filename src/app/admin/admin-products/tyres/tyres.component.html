@@ -1,0 +1,120 @@
+<table class="table">
+    <thead>
+    </thead>
+    <tbody>
+        <tr *ngFor="let product of adminProducts">
+            <td><img src="assets/styles/images/tyreProduct.png" alt=""> {{product.brand.name}} {{product.model}}</td>
+            <td>
+                <p>Ширина</p><br><span>{{ product.width.param }}</span>
+            </td>
+            <td>
+                <p>Висота</p><br><span>{{ product.height.param }}</span>
+            </td>
+            <td>
+                <p>Діаметр</p> <br><span>{{ product.dia.param }}</span>
+            </td>
+            <td>
+                <p>Індекс швидкості</p><br><span>{{ product.speed }}</span>
+            </td>
+            <td>
+                <p>Індекс навантаження</p><br><span>{{ product.weight }}</span>
+            </td>
+            <td>
+                <p>Ціна</p><br><span>{{ product.price }}</span>
+            </td>
+            <td><button type="button" data-bs-toggle="modal" data-bs-target="#productModal"
+                    (click)="editProduct(product)">edit</button></td>
+            <td><button type="button" (click)="deleteProduct(product)">delete</button></td>
+        </tr>
+    </tbody>
+    <button type="button" class="addProduct" data-bs-toggle="modal" data-bs-target="#productModal">Add Product</button>
+</table>
+
+<div class="modal fade" id="productModal" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <form [formGroup]=productForm class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="productModalLabel">Add tire</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <label for="category" class="form-label label">Category</label>
+                <select formControlName="category" class="form-select">
+                    <option [ngValue]="category" *ngFor="let category of categories">{{category.name}}</option>
+                </select>
+                <div class="group">
+                    <div class="group-input">
+                        <label for="path" class="form-label label">Category Path</label>
+                        <input type="text" formControlName="path" class="form-control">
+                    </div>
+                    <div class="group-input">
+                        <label for="brand" class="form-label label">Бренд</label>
+                        <select type="text" formControlName="brand" class="form-select">
+                            <option [ngValue]="product" *ngFor="let product of productBrands">{{product.name}}</option>
+                        </select>
+                    </div>
+                    <div class="group-input">
+                        <label for="model" class="form-label label">Модель</label>
+                        <input type="text" formControlName="model" class="form-control">
+                    </div>
+                    <div class="group-input">
+                        <label for="width" class="form-label label">Ширина</label>
+                        <select type="text" formControlName="width" class="form-select">
+                            <option [ngValue]="product" *ngFor="let product of productWidth">{{product.param}}</option>
+                        </select>
+                    </div>
+                    <div class="group-input">
+                        <label for="height" class="form-label label">Висота</label>
+                        <select type="text" formControlName="height" class="form-select">
+                            <option [ngValue]="product" *ngFor="let product of productHeight">{{product.param}}</option>
+                        </select>
+                    </div>
+                    <div class="group-input">
+                        <label for="dia" class="form-label label">Діаметр</label>
+                        <select type="text" formControlName="dia" class="form-select">
+                            <option [ngValue]="product" *ngFor="let product of productDia">{{product.param}}</option>
+                        </select>
+                    </div>
+                    <div class="group-input">
+                        <label for="speed" class="form-label label">Індекс швидкості</label>
+                        <input type="text" formControlName="speed" class="form-control">
+                    </div>
+                    <div class="group-input">
+                        <label for="weight" class="form-label label">Індекс навантаження</label>
+                        <input type="text" formControlName="weight" class="form-control">
+                    </div>
+                    <div class="group-input">
+                        <label for="season" class="form-label label">Сезон</label>
+                        <select type="text" formControlName="season" class="form-select">
+                            <option [ngValue]="product" *ngFor="let product of productSeazon">{{product.param}}</option>
+                        </select>
+                    </div>
+                    <div class="group-input">
+                        <label for="count" class="form-label label">К-сть</label>
+                        <input type="text" formControlName="count" class="form-control">
+                    </div>
+                    <div class="group-input">
+                        <label for="orderCount" class="form-label label">К-сть замовлення</label>
+                        <input type="text" formControlName="orderCount" value="1" class="form-control">
+                    </div>
+                    <div class="group-input">
+                        <label for="price" class="form-label label">Ціна</label>
+                        <input type="number" formControlName="price" class="form-control">
+                    </div>
+                    <!-- <div class="group-input">
+                        <label for="imagePath" class="form-label label">Фото</label>
+                        <input type="file"  formControlName="imagePath" class="form-control" id="formFile" (change)="upload($event)">
+                    </div> -->
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button [disabled]=productForm.invalid type="button" class="btn btn-primary" data-bs-dismiss="modal"
+                    (click)="createTyre()" *ngIf="!editStatus">Add product</button>
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal"
+                    *ngIf="editStatus" (click)="saveProduct()">Save product</button>
+
+            </div>
+        </form>
+    </div>
+</div>

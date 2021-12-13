@@ -1,0 +1,87 @@
+<div class="orders">
+    <input type="text" [(ngModel)]="field" class="form-control" placeholder="search order">
+    <button type="button" [ngClass]="{'activeBtn': new}" (click)="newOrder()" >Нові {{ '(' + newOrders.length + ')'}}</button>
+    <button type="button" [ngClass]="{'activeBtn': inProgress}" (click)="inProgressOrder()" >В роботі
+        {{ '(' + confirmedOrders.length + ')'}}
+    </button>
+    <button type="button" [ngClass]="{'activeBtn': archive}" >Архів</button>
+    <div class="oredr-table">
+        <table class="table table-borderless" *ngIf="new">
+            <thead>
+                <tr>
+                    <th>Номер замовлення</th>
+                    <th>Товар</th>
+                    <th>Детальніше</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let order of newOrders; let i=index">
+                    <td >{{ '№' + '0' + i + 1 }} {{order.date | date: 'd.M.yyyy'}} <br>
+                        <img src="assets/styles/icons/Ellipse.png" alt="" >
+                        {{ order.status?'Нове замволення': 'false' }}
+                        <br>
+                        <p [ngStyle]="{'margin-top': '20px', 'color': '#555555', 'font-weight': 'normal'}">Контактні Дані</p>
+                        {{order.firstName}} {{order.lastName}}
+                        <br>
+                        {{order.phone}}
+                     </td>
+                    <td> {{order.basket[0].brand.name}} {{order.basket[0].model}} {{order.basket[0].width.param | slice:0:3}}/{{order.basket[0].height.param | slice:0:2}} {{order.basket[0].dia.param}} <br> {{order.basket[0].orderCount + 'шт'}} {{order.basket[0].orderCount * order.basket[0].price + 'грн'}}
+                        <br>
+                         <p [ngStyle]="{'margin-top': '20px', 'color': '#555555', 'font-weight': 'normal'}">Спосіб доставки</p>
+                         {{order.delivery}}
+                         <br> 
+                         {{order.city}}, {{order.adress}}   
+
+                    </td> 
+                    <td>
+                        <p [ngStyle]="{'margin-top': '20px', 'color': '#555555', 'font-weight': 'normal'}">Спосіб оплати </p>
+                        {{order.payment}}
+                        <hr>
+                         <small [ngStyle]="{'margin-right': '125px'}"> Сума замовлeння: </small> {{order.basket[0].price * order.basket[0].orderCount + 'грн'}}
+                         <button class="archive" type="button">В Архів</button>
+                         <button class="confirmOrder" type="button" (click)="confirmOrder(order)">Підтвердити</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <table class="table table-borderless" *ngIf="inProgress">
+            <thead>
+                <tr>
+                    <th>Номер замовлення</th>
+                    <th>Товар</th>
+                    <th>Детальніше</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let order of confirmedOrders; let i=index">
+                    <td >{{ '№' + '0' + i + 1 }} {{order.date | date: 'd.M.yyyy'}} <br>
+                        <img src="assets/styles/icons/Ellipse.png" alt="" >
+                        {{ order.status?'Нове замволення': 'false' }}
+                        <br>
+                        <p [ngStyle]="{'margin-top': '20px', 'color': '#555555', 'font-weight': 'normal'}">Контактні Дані</p>
+                        {{order.firstName}} {{order.lastName}}
+                        <br>
+                        {{order.phone}}
+                     </td>
+                    <td> {{order.basket[0].brand.name}} {{order.basket[0].model}} {{order.basket[0].width.param | slice:0:3}}/{{order.basket[0].height.param | slice:0:2}} {{order.basket[0].dia.param}} <br> {{order.basket[0].orderCount + 'шт'}} {{order.basket[0].orderCount * order.basket[0].price + 'грн'}}
+                        <br>
+                         <p [ngStyle]="{'margin-top': '20px', 'color': '#555555', 'font-weight': 'normal'}">Спосіб доставки</p>
+                         {{order.delivery}}
+                         <br> 
+                         {{order.city}}, {{order.adress}}   
+
+                    </td> 
+                    <td>
+                        <p [ngStyle]="{'margin-top': '20px', 'color': '#555555', 'font-weight': 'normal'}">Спосіб оплати </p>
+                        {{order.payment}}
+                        <hr>
+                         <small [ngStyle]="{'margin-right': '125px'}"> Сума замовлeння: </small> {{order.basket[0].price * order.basket[0].orderCount + 'грн'}}
+                         <button class="archive" type="button">В Архів</button>
+                         <button class="done" type="button" (click)="confirmOrder(order)">Виконано</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

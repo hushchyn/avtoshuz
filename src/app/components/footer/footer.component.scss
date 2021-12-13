@@ -1,0 +1,210 @@
+footer {
+  width: 100%;
+  height: 460px;
+  background-color: #747373;
+}
+
+.promotion-box{
+
+  width: 100%;
+  background-color: #FFBB55;
+
+  .promotion{
+
+  width: 1165px;
+  height: 160px;
+  margin: 0px auto;
+  background-color: #FFBB55;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+
+  &-tire{
+      width: 250px;
+      height: 176px;
+      position: relative;
+      margin-bottom: 36px;
+
+      &-icon{
+          position: absolute;
+          left: 200px;
+          top: 50px;
+      }
+  }
+
+  &-text{
+      width: 374px;
+      height: 64px;
+      color: white;
+      font-size: 26px;
+      font-weight: bold;
+
+      p{
+          margin-left: 30px;
+      }
+  }
+
+  &-callback{
+      width: 463px;
+      height: 82px;
+      display: flex;
+      justify-content: space-between;
+
+      input{
+          height: 60px;
+          width: 225px;
+          background: inherit;
+          border: 1px solid white;
+          border-radius: 3px;
+          padding: 15px;
+
+          
+         
+      }
+
+      button{
+          width: 218px;
+          height: 60px;
+          background-color: white ;
+          border: none;
+          border-radius: 3px;
+          color: #FFBB55;
+          font-weight: bold;
+          
+      }
+  }
+}
+}
+
+.blocks {
+  width: 100%;
+  height: 214px;
+  display: flex;
+  justify-content: space-between;
+  padding: 50px 0;
+
+  &-company {
+    width: 135px;
+    height: 190px;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    h5 {
+      font-size: 18px;
+      font-weight: bold;
+      color: white;
+      margin-bottom: 8px;
+    }
+
+    a {
+      color: white;
+    }
+
+  }
+
+  &-information {
+    width: 170px;
+    height: 190px;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    h5 {
+      font-size: 18px;
+      font-weight: bold;
+      color: white;
+      margin-bottom: 8px;
+    }
+
+    a {
+      color: white;
+    }
+  }
+
+  &-socialMedia{
+    width: 175px;
+    height: 167px;
+    
+    h5 {
+      font-size: 18px;
+      font-weight: bold;
+      color: white;
+      margin-bottom: 35px;
+    }
+
+    &-icons{
+
+      img{
+        margin-right:5px;
+      }
+    }
+
+    &-raiting{
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+
+      p{
+        font-size: 16px;
+        font-weight: bold;
+        color: white;
+      }
+
+      span{
+        font-size: 13px;
+        color: #A6A5A5;
+        font-weight: 100;
+
+      }
+
+      img{
+        width: 60px;
+        height: 30px;
+        margin-bottom: 5px;
+        
+      }
+    }
+  }
+
+  &-contacts{
+    width: 300px;
+    height: 195px;
+
+    h5{
+      font-size: 18px;
+      font-weight: bold;
+      color: white;
+      margin-bottom: 35px;
+    }
+
+    &-contact{
+      display: flex;
+      justify-content: space-between;
+
+      &-phone{
+        font-size: 15px;
+        
+        p{
+          color: white;
+          margin-bottom: 10px;
+        }
+      }
+
+      &-shedule{
+        color: white;
+
+        p{
+          margin-bottom: 15px;
+        }
+
+        &-callback{
+          color: #FFEDCC;
+        }
+      }
+    }
+  }
+}

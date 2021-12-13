@@ -1,0 +1,91 @@
+<table class="table" >
+    <thead>
+    </thead>
+    <tbody>
+        <tr *ngFor="let product of adminProducts" >
+            <td><img src="assets/styles/images/trackProduct.jpg" width="50" alt=""> {{product.brand}} {{product.model}}</td>
+            <td><p>Ширина</p><br><span>{{ product.width }}</span></td>
+            <td><p>Профіль</p><br><span>{{ product.height + ' %' }}</span></td>
+            <td><p>Діаметр</p> <br><span>{{ product.dia }}</span></td>
+            <td><p>Сезон</p><br><span>{{ product.season }}</span></td>
+            <td><p>Тип Осі</p><br><span>{{ product.type }}</span></td>
+            <td><p>Ціна</p><br><span>{{ product.price }}</span></td>
+            <td><button type="button" data-bs-toggle="modal" data-bs-target="#productModal" (click)="editProduct(product)">edit</button></td>
+            <td><button type="button" (click)="deleteProduct(product)">delete</button></td>
+        </tr>
+    </tbody>
+    <button type="button" class="addProduct" data-bs-toggle="modal" data-bs-target="#productModal">Add Product</button>
+  </table>
+
+  <div class="modal fade" id="productModal" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <form [formGroup]=productForm class="modal-content" >
+            <div class="modal-header">
+                <h5 class="modal-title" id="productModalLabel">Add tire</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <label for="category" class="form-label label">Category</label>
+                <select formControlName="category" class="form-select">
+                    <option [ngValue]="category" *ngFor="let category of categories">{{category.name}}</option>
+                </select>
+                <div class="group">
+                    <div class="group-input">
+                        <label for="path" class="form-label label">Category Path</label>
+                        <input type="text" formControlName="path" class="form-control">
+                    </div>
+                 <div class="group-input">
+                        <label for="brand" class="form-label label">Бренд</label>
+                        <input type="text" formControlName="brand" class="form-control">
+                    </div>
+                    <div class="group-input">
+                        <label>Модель</label>
+                        <input type="text" formControlName="model" class="form-control">
+                    </div>
+                    <div class="group-input">
+                        <label for="width" class="form-label label">Ширина</label>
+                        <input type="text" formControlName="width" class="form-control">
+                    </div>
+                    <div class="group-input">
+                        <label for="height" class="form-label label">Профіль</label>
+                        <input type="text" formControlName="height" class="form-control">
+                    </div>
+                    <div class="group-input">
+                        <label for="dia" class="form-label label">Радіус</label>
+                        <input type="text" formControlName="dia" class="form-control">
+                    </div>
+                    <div class="group-input">
+                        <label for="type" class="form-label label">Тип осі</label>
+                        <input type="text" formControlName="type" class="form-control">
+                    </div>
+                    <div class="group-input">
+                        <label for="season" class="form-label label">Сезон</label>
+                        <input type="text" formControlName="season" class="form-control">
+                    </div>
+                    <div class="group-input">
+                        <label for="count" class="form-label label">К-сть</label>
+                        <input type="text" formControlName="count" class="form-control">
+                    </div>
+                    <div class="group-input">
+                        <label for="price" class="form-label label">Ціна</label>
+                        <input type="text" formControlName="price" class="form-control">
+                    </div>
+                    <!-- <div class="group-input">
+                        <label for="imagePath" class="form-label label">Фото</label>
+                        <input type="file"  formControlName="imagePath" class="form-control" id="formFile" (change)="upload($event)">
+                    </div> -->
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button [disabled]=productForm.invalid type="button" class="btn btn-primary" data-bs-dismiss="modal" (click)="createTyre()" >Add product</button>
+                <button  type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal" *ngIf="editStatus" (click)="saveProduct()">Save product</button>
+                
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+

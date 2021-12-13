@@ -1,0 +1,77 @@
+<div class="main-container">
+    <div class="admin d-flex align-items-start ">
+        <div class="admin-navigation">
+            <p>Особистий кабінет</p>
+            <div class="admin-navigation-btn">
+                <button type="button" [ngClass]="{'btn-active': profile}" (click)="profileActive()">Профіль</button>
+                <button type="button" [ngClass]="{'btn-active': orders}" (click)="ordersActive()">Замовлення</button>
+                <button type="button" [ngClass]="{'btn-active': future}" (click)="futureActive()">Вибрані</button>
+            </div>
+            <button type="button" class="admin-navigation-signOut" (click)="signOut()"> Вийти з кабінету </button>
+        </div>
+        <form [formGroup]=userForm *ngIf="profile; else orders">
+            <div class="admin-info" *ngIf="profile; else ordersTab">
+                <p>Персональні дані</p>
+                <div class="group-input d-flex">
+                    <input type="text" formControlName="firstName" class="form-control" placeholder="Ім'я">
+                    <input type="text" formControlName="lastName" class="form-control" placeholder="Фамилия">
+                </div>
+                <div class="group-input d-flex">
+                    <input type="text" formControlName="email" class="form-control" placeholder="Email">
+                    <input type="text" formControlName="phone" class="form-control" placeholder="Телефон">
+
+                </div>
+                <button type="button" class="saveInfo" (click)="saveInfo()">Зберегти дані</button>
+                <p class="admin-info-adress">Мої адреса</p>
+                <small>Добавте ваші адреси доствок</small>
+                <button type="button" *ngIf="add" (click)="addAdress()">Додати</button>
+                <div class="adress" *ngIf="save">
+                    <input type="text" class="form-control">
+                    <input type="text" class="form-control">
+                    <button class="save" *ngIf="save" (click)="saveAdress()">Зберегти</button>
+                </div>
+            </div>
+            <ng-template #ordersTab></ng-template>
+        </form>
+
+
+        <ng-template #orders>
+        <div class="myOrders" *ngFor="let user of currentUser">
+            <p>Мої замовлення</p>
+            <div class="myOrders-details" *ngFor="let orders of user.orders">
+                <div class="myOrders-details-firstBlock">
+                    <div class="myOrders-details-product d-flex">
+                        <img src="assets/styles/images/tyreProduct.png" alt="">
+                        <div class="myOrders-details-product-info">
+                            {{orders.basket[0].brand.name}} {{orders.basket[0].model}} <br>
+                            {{orders.basket[0].width.param | slice:0:3}}/{{orders.basket[0].height.param | slice:0:2}}
+                            {{orders.basket[0].dia.param | slice:0:3}}
+                        </div>
+                    </div>
+                    <small>{{orders.basket[0].orderCount + 'шт'}}</small>
+                    <p>{{orders.basket[0].orderCount * orders.basket[0].price + 'грн'}}</p>
+                </div>
+                <div class="myOrders-details-secondBlock" >
+                    <div class="myOrders-details-secondBlock-leftSide">
+                        <p>Отримувач: </p>
+                            <small>{{orders.firstName}} {{orders.lastName}} {{orders.phone}}</small> 
+                        
+                        <p>Спосіб доставки: </p>
+                            {{orders.delivery}} {{orders.city}} {{orders.adress}}
+                        
+                        <p>Споссііь оплати:</p>   
+                            {{orders.payment}}
+                        
+                    </div>
+                    <div class="myOrders-details-secondBlock-rightSide">
+                        <div class="myOrders-details-secondBlock-rightSide-price">
+                            <p>До сплати:</p>
+                            <strong>{{orders.basket[0].orderCount * orders.basket[0].price + 'грн'}}</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ng-template>
+    </div>
+</div>

@@ -1,0 +1,159 @@
+.admin {
+
+    &-navigation {
+      width: 220px;
+      height: 250px;
+      background-color: #f4f4f4;
+      margin-top: 30px;
+      padding: 26px 19px;
+      margin-bottom: 120px;
+  
+      p {
+        font-size: 18px;
+        font-weight: 700;
+        color: #333333;
+      }
+  
+      &-btn {
+  
+        height: 150px;
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: column;
+        align-items: flex-start;
+        margin: 15px 15px 0px;
+  
+        button {
+          border: none;
+          background: inherit;
+          font-size: 15px;
+          color: #333333;
+        }
+  
+        .btn-active {
+          border-left: 2px solid orange;
+          font-weight: bold;
+        }
+  
+      }
+  
+      &-signOut {
+        border: none;
+        background: inherit;
+        color: #907857;
+        font-size: 14px;
+  
+      }
+    }
+
+    &-info{
+        width: 740px;
+        background-color: #f4f4f4;
+        margin: 30px 30px;
+        padding: 26px 41px;
+
+
+        p{
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 18px;
+        }
+
+        &-adress{
+            margin-top: 25px;
+        }
+
+        button{
+            background-color: inherit;
+            border: none;
+            color: orange;
+            margin-left: 24px;
+        }
+
+        .saveInfo{
+          background-color: rgb(61, 149, 204);
+          width: 160px;
+          height: 40px;
+          border-radius: 3px;
+          color: white;
+          margin-left: 0px;
+        }
+    }
+
+    .group-input{
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .form-control{
+        width: 48%;
+    }
+
+   .adress{
+       input{
+           margin-top: 20px;
+       }
+
+       .save{
+           margin: 18px 0 ;
+       }
+   }
+
+   .myOrders{
+    width: 840px;
+    margin: 30px 30px;
+
+    &-details{
+      width: 735px;
+      border: 1px solid #E2E2E2;
+      margin: 12px 0 20px;
+      padding: 20px;
+      
+
+      &-firstBlock{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      &-product{
+        align-items: center;
+      }
+
+      &-secondBlock{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 18px;
+
+        p{
+          font-size: 16px;
+          font-weight: bold;
+          margin-bottom: 3px;
+          margin-top: 16px
+        }
+
+        &-rightSide{
+          p{
+            font-size: 14px;
+            font-weight: normal;
+            margin: 0px;
+            margin-right: 16px;
+          }
+
+          &-price{
+            display: flex;
+            margin-top: 70px;
+
+            strong{
+              font-size: 20px;
+              font-weight: bold;
+            }
+          }
+        }
+
+      }
+    }
+
+   }
+    
+}

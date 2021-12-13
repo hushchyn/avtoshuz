@@ -1,0 +1,52 @@
+.table{
+    
+    &-name{
+        width: 800px;
+    }
+
+    &-button{
+        width: 150px;
+    }
+
+    &-tbody{
+        td{
+            height: 40px;
+            border-bottom: 1px solid #777777;
+        }
+
+        &-btn{
+            width: 85px;
+        }
+
+        &-id{
+            width: 50px;
+        }
+
+        button{
+            border: none;
+            height: 40px;
+            width: 80px;
+            border-radius: 3px;
+            background-color: black;
+            border: 1px solid #333333;
+            
+            &:hover{
+                background-color: black;
+                color: white;
+            }
+        }
+       
+    }
+}
+
+
+.addCategory{
+    width: 200px;
+    height: 40px;
+    background-color: #FFBB55;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    margin-left: 83%;
+    margin-top: 30px;
+}

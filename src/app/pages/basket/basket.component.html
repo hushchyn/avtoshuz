@@ -1,0 +1,88 @@
+<div class="main-container">
+    <div class="basket-bread-camps">
+        <a>Головна</a>
+        <img src="assets/styles/icons/breadCampsArrow.png" width="4" alt="">
+        <a>Корзина</a>
+    </div>
+    <h1>Корзина</h1>
+    <div class="blocks">
+        <div class="blocks-left">
+            <div class="product-card" *ngFor="let product of products">
+                <img class="product-card-img" src="assets/styles/images/tyreProductBig.png" alt="">
+                <div class="product-card-info">
+                    <div class="product-card-info-inStock">
+                        <img src="assets/styles/icons/inStock.svg" alt="">
+                        <p class="product-card-price-inStock-p">В наявності</p>
+                    </div>
+                    <div class="product-card-info-name">
+                        <p>{{product.brand.name + ' ' +product.model}} {{ product.width.param | slice:0:3 }}/{{
+                            product.height.param | slice:0:2 }} {{ product.dia.param | slice:0:3 }} {{product.weight |
+                            slice:0:2}}{{product.speed | slice:0:1}}</p>
+                    </div>
+                </div>
+                <div class="product-card-priceForItem">
+                    <p>Ціна за одиницю</p>
+                    <h4 class="price">{{product.price + ' грн'}}</h4>
+                </div>
+                <div class="product-card-price">
+                    <div class="product-card-price-count">
+                        <span class="" (click)="changeCount(product,false)">-</span>
+                        <input type="text" maxlength="3" [value]="product.orderCount">
+                        <span class="" (click)="changeCount(product,true)">+</span>
+                    </div>
+                </div>
+                <div class="product-card-sum">
+                    <p>{{product.orderCount * product.price + ' грн'}}</p>
+                </div>
+                <div class="product-card-del">
+                   <button type="button" (click)="removeProduct(product)"><img src="assets/styles/icons/close.png" alt=""></button>
+                    <button type="button"><img src="assets/styles/icons/like.svg" alt=""></button>
+                </div>
+            </div>
+        </div>
+
+        <div class="blocks-right">
+            <p>За покупку вам нарахують</p>
+            <h2>300 бонусов</h2>
+            <div class="blocks-right-delivery">
+                <p>Доставка і повернення</p>
+                <ul>
+                    <li>Доставим по Украине в течении 3-4 дней на склад или на ваш адрес</li>
+                    <li>Возрат в течении 14 днейw</li>
+                    <li>Замена заводского брака или полный возрат стоимости</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="total-price">
+        <div class="total-price-text">
+            <p>Всього до оплати</p>
+            <p class="total-price-text-total">{{total + ' грн'}}</p>
+        </div>
+        <button type="button" class="btnPrimary-basket" [routerLink]="[ '/order']">Оформити замовлення</button>
+        <router-outlet></router-outlet>
+    </div>
+</div>
+
+
+
+<div class="advantages">
+    <div class="advantages-block">
+        <h4>Економно</h4>
+        <p>Працюємо напряму з Європейськими складами, виключаємо накрутку цін зі сторони посередника</p>
+    </div>
+    <div class="advantages-block">
+        <h4>Свіжі шини</h4>
+        <p>100% оригінальні шини не старші 2-ох років. Шини зберігаються в правильних умовах, що продовжує термін служби
+        </p>
+    </div>
+    <div class="advantages-block">
+        <h4>Свій склад</h4>
+        <p>Доставляємо шини в термін від 3-4 днів Відправляємо Новою поштою, Міст Експрес, Інтайм</p>
+    </div>
+    <div class="advantages-block">
+        <h4>Турбота та консультація</h4>
+        <p>Ми слідкуємо за новинами ринку, тому пропонуємо вам тільки найкращі пропозиції</p>
+    </div>
+</div>

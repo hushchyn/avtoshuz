@@ -1,0 +1,50 @@
+<div class="filter">
+    <form [formGroup]=formFilter>
+        <div class="filter-parameters">
+            <div class="filter-parameters-toggle">
+                <p class="filter-parameters-toggle-active">По парамеирам</p>
+                <p>По авто</p>
+            </div>
+            <div class="filter-parameters-tyres">
+                <select formControlName="width">
+                    <option value="" selected >Ширина</option>
+                    <option [ngValue]="product" *ngFor="let product of productWidth">{{product.param}}</option>
+                </select>
+                <select formControlName="height">
+                    <option value="" selected>Висота</option>
+                    <option [ngValue]="product" *ngFor="let product of productHeight">{{product.param}}</option>
+                </select>
+                <select formControlName="dia">
+                    <option value="">Діаметр</option>
+                    <option [ngValue]="product" *ngFor="let product of productDia">{{product.param}}</option>
+                </select>
+            </div>
+        </div>
+        <div class="filter-season" >
+            <p>Сезонність</p>
+            <label for="summer">
+                <input type="checkbox" id="summer">Літні
+            </label>
+            <label for="winter">
+                <input type="checkbox" id="winter">Зимові
+            </label>
+            <label for="demi">
+                <input type="checkbox" id="demi">Всесезонні
+            </label>
+        </div>
+        <div class="filter-brand">
+            <p>Бренд</p>
+            <div class="filter-brand-search">
+                <img src="assets/styles/icons/linza.png" alt="" width="20">
+                <input  type="text" name="" id="" placeholder="Пошук по бренду" (ngModel)="field">
+            </div>
+            <div class="filter-brand-scroll">
+                <div class="filter-brand-list" *ngFor="let brand of productBrands | search:field ">
+                    <label for="brand"></label>
+                    <input type="checkbox" (click)="checkedBrand(brand)" formControlName="brand" id="brand"> {{brand.name}}
+                </div>
+            </div>
+        </div>
+    </form>
+    <button type="button" (click)="filterProducts()"> Підібрати </button>
+</div>

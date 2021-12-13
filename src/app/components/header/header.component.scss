@@ -1,0 +1,177 @@
+
+ 
+
+.navigate {
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &-languages {
+    width: 200px;
+  }
+
+  &-link {
+    width: 350px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &-profile {
+    width: 200px;
+    display: flex;
+    justify-content: end;
+
+    a{
+      color: #777777;
+    }
+
+    img {
+      margin-right: 5px;
+    }
+  }
+}
+
+
+hr {
+  margin: 0;
+}
+
+.section-second {
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &-phone {
+    display: flex;
+
+    img {
+      width: 32px;
+      margin-left: 10px;
+    }
+  }
+
+  &-numbers {
+    font-size: 20px;
+    font-weight: 700;
+  }
+
+  &-text {
+    font-size: 10px;
+    margin-top: 3px;
+  }
+
+  &-basket {
+    width: 200px;
+    display: flex;
+    justify-content: end;
+    position: relative;
+
+    &-count{
+      width: 25px;
+      height: 25px;
+      border-radius: 50px;
+      background-color: #FFBB55;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      top: -12px;
+      left: 185px;
+    }
+  }
+
+  &-savedProduct{
+    width: 27px;
+    height: 23px;
+    margin: 3px 20px;
+
+  }
+
+}
+
+.navigate-menu{
+    height: 50px;
+    background-color: #747373;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &-link{
+        display: flex;
+    }
+
+    &-search{
+        display: flex;
+        margin-right: 55px;
+    }
+
+    img{
+        margin-right: 10px;
+    }
+}
+
+
+.offcanvas{
+
+  &-end{
+    width: 500px;
+  }
+
+  &-body{
+   margin-top: 20px;
+  }
+
+  button{
+    font-size: 20px;
+    font-weight: 500;
+    color: #999999;
+    margin: 0 12px 40px 0;
+    }
+
+  .btn-active{
+    text-decoration-style: solid;
+    color: #555555;
+    border-color: #F4A835;
+    color: #F4A835;
+    box-shadow: 0 0 10px rgb(223 180 115);
+  }
+
+  .sign{
+    background-color: #FFBB55;
+    width: 100%;
+    height: 50px;
+    border: none;
+    color: white;
+    margin-top: 30px;
+    border-radius: 0.25rem;
+    
+    &:disabled {
+      background: #ccc;
+      color: #000;
+      cursor: not-allowed;
+    }
+  }
+
+  input{
+    margin-bottom: 8px;
+    
+    &.ng-invalid.ng-touched{
+      border-color: #fe8690;
+      outline: 0;
+      box-shadow: 0 0 0 0.25rem #dc354557;
+    }
+    &.ng-valid{
+      border-color: #86fea1;
+      outline: 0;
+      box-shadow: 0 0 0 0.25rem #35dc7357;
+    }
+  }
+}
+
+.validation{
+  color: red;
+}
+

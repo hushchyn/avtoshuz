@@ -1,0 +1,40 @@
+<table class="table">
+    <thead class="table-dark">
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Категорія</th>
+            <th scope="col">Edit</th>
+            <th scope="col">Delete</th>
+        </tr>
+    </thead>
+    <tbody class="table-tbody">
+        <tr *ngFor="let c of categoryArray; let i=index">
+            <td class="table-tbody-id">{{ i + 1}}</td>
+            <td>{{ c.name}}</td>
+            <td class="table-tbody-btn"><button type="button" class="" data-bs-toggle="modal" data-bs-target="#categoryModal"
+                    (click)="editCategory(c)">edit</button></td>
+            <td class="table-tbody-btn"><button type="button" (click)="deleteCategory(c)" >delete</button></td>
+        </tr>
+    </tbody>
+</table>
+<button type="button" class="addCategory" data-bs-toggle="modal" data-bs-target="#categoryModal">Add Category</button>
+
+<div class="modal fade" id="categoryModal" tabindex="-1" aria-labelledby="categoryModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <form [formGroup]=categoryForm class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="categoryModalLabel">Modal title</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <input class="form-control form-control-sm" formControlName="name" type="text"
+                    placeholder="add category name" aria-label=".form-control-sm example">
+            </div>
+            <div class="modal-footer">
+                <button type="button" *ngIf="btnAdd" class="btn btn-primary" [disabled]=categoryForm.invalid
+                    (click)="createCategory()"data-bs-dismiss="modal">Add Category</button>
+                <button type="button" class="btn btn-primary" *ngIf="!btnAdd" (click)="saveEdit()" data-bs-dismiss="modal">SaveCategory</button>
+            </div>
+        </form>
+    </div>
+</div>

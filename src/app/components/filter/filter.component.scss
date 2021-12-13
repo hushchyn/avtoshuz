@@ -1,0 +1,159 @@
+.filter{
+    width: 220px;
+    height: 1616px;
+    margin-top: 30px;
+
+    &-parameters{
+        height: 287px;
+        background-color: #FFEDCC;
+        border: 1px solid #FFBB55;
+        padding: 26px 19px;
+
+        &-toggle{
+            display: flex;
+            justify-content: space-between;
+
+            p{
+                font-size: 13px;
+            }
+
+
+            &-active{
+            height: 25px;
+            font-size: 13px;
+            font-weight: 700;
+            margin-bottom: 17px;
+            border-bottom: 2px solid orange;
+            }
+        }
+
+        &-tyres{
+
+            select{
+            width: 180px;
+            height: 40px;
+            border: none;
+            margin-bottom: 20px;
+            }
+        }
+    }
+
+    &-season{
+        width: 220px;
+        height: 177px;
+        margin-top: 10px;
+        background-color: #f4f4f4;
+        padding: 27px 19px;
+
+        label{
+            width: 100%;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+
+        input[type="checkbox"]{
+            width: 18px;
+            height: 18px;
+            border: none;
+            outline: none;
+            margin-right: 10px;
+        }
+
+        p{
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 18px;
+        }
+
+    }
+
+    &-brand{
+        width: 220px;
+        height: 312px;
+        background-color: #f4f4f4;
+        margin-top: 10px;
+        padding: 27px 19px;
+
+        p{
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        &-search{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #777777;
+            margin-bottom: 10px;
+
+
+            input{
+                height: 35px;
+                border: none;
+                background-color: inherit;
+                margin-left: 5px;
+
+               
+
+            }
+            ::placeholder{
+                color: #777777;
+                font-size: 14px;
+                margin-left: 10px;
+            }
+
+            
+        }
+
+        &-list{
+
+            label{
+                width: 100%;
+                margin-bottom: 15px;
+                display: flex;
+                align-items: center;
+                }
+
+            input[type="checkbox"]{
+                width: 18px;
+                height: 18px;
+                border: none;
+                outline: none;
+                margin-right: 10px;
+            }
+        }
+
+        &-scroll{
+            overflow-y: scroll;
+            height: 190px;
+
+            &::-webkit-scrollbar {
+                width: 8px;
+                height: 20px; 
+                background-color: #f4f4f4;
+            }
+
+            &::-webkit-scrollbar-thumb {
+                background-color: #999999;
+                height: 30px;
+                border-radius: 9em;
+                
+            }
+        }
+    }
+
+  button{
+    margin-top: 16px;
+        width: 100%;
+        height: 40px;
+        font-weight: bold;
+        border: none;
+        border-radius: 3px;
+        background-color: inherit;
+        border: 2px solid orange;
+  }
+
+    
+}

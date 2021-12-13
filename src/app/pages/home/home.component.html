@@ -1,0 +1,590 @@
+<div class="main-container">
+  <div class="filter" [style]="{'backgroundImage': backGroundFilter}">
+    <div class="filter-btn">
+      <button type="button" class="filter-category" [ngClass]="{ 'filter-category-active': btnCategoryTyres}"
+        (click)="tyreCategory()">Автошини
+      </button>
+      <button class="filter-category" type="button" [ngClass]="{ 'filter-category-active': btnCategoryDisk}"
+        (click)="diskCategory()">Диски</button>
+      <button class="filter-category" type="button" [ngClass]="{ 'filter-category-active': btnCategoryMoto}"
+        (click)="motoCategory()">Мотошини</button>
+      <button class="filter-category" type="button" [ngClass]="{ 'filter-category-active': btnCategoryTrack}"
+        (click)="trackCategory()">Грузові шини</button>
+    </div>
+
+    <div class="filter-parameters">
+      <div class="filter-tyres" *ngIf="btnCategoryTyres; else diskFilter">
+        <p>По параметрам</p>
+        <form [formGroup]=formFilter class="filter-parametr">
+
+          <select type="text" class="filter-btns" formControlName="width">
+            <option value="" selected >Ширина</option>
+            <option [ngValue]="product" *ngFor="let product of productWidth">{{product.param}}</option>
+          </select>
+
+          <select type="text" class="filter-btns" formControlName="height">
+            <option value="" selected>Висота</option>
+            <option [ngValue]="product" *ngFor="let product of productHeight">{{product.param}}</option>
+          </select>
+
+          <select type="text" class="filter-btns" formControlName="dia">
+            <option value="" selected>Діаметр</option>
+            <option [ngValue]="product" *ngFor="let product of productDia">{{product.param}}</option>
+          </select>
+
+          <select type="text" class="filter-season" formControlName="season">
+            <option value="" selected>Сезон</option>
+            <option [ngValue]="product" *ngFor="let product of productSeazon">{{product.param}}</option>
+          </select>
+
+          <select type="text" class="filter-mark" formControlName="brand">
+            <option value="" selected>Бренд</option>
+            <option [ngValue]="product" *ngFor="let product of productBrands">{{product.name}}</option>
+          </select>
+
+          <button class="filter-submit  dropdown-toggle" type="button" id="dropdownMenuButton1"
+            data-bs-toggle="dropdown" aria-expanded="false" (click)="searchProduct()">
+            <img src="assets/styles/icons/check.png" alt="">
+          </button>
+        </form>
+      </div>
+
+      <ng-template #diskFilter>
+        <div class="filter-tyres" *ngIf="btnCategoryDisk; else motoFilter">
+          <p>По параметрам</p>
+          <div class="filter-parametr">
+            <select type="text" class="filter-btns">
+              <option selected disabled hidden>Радіус</option>
+              <option [ngValue]="product" *ngFor="let product of wheelsDiametr">{{product.param}}</option>
+            </select>
+
+            <select type="text" class="filter-btns">
+              <option selected disabled hidden>Ширина</option>
+              <option [ngValue]="product" *ngFor="let product of wheelsWidth">{{product.param}}</option>
+            </select>
+
+            <select type="text" class="filter-btns">
+              <option selected disabled hidden>PCD</option>
+              <option [ngValue]="product" *ngFor="let product of wheelsPCD">{{product.param}}</option>
+            </select>
+
+            <select type="text" class="filter-season">
+              <option selected disabled hidden>ET</option>
+              <option [ngValue]="product" *ngFor="let product of wheelsET">{{product.param}}</option>
+            </select>
+
+            <select type="text" class="filter-mark">
+              <option selected disabled hidden>Марка</option>
+              <option [ngValue]="product" *ngFor="let product of wheelsBrand">{{product.name}}</option>
+            </select>
+
+            <button class="filter-submit  dropdown-toggle" type="button" id="dropdownMenuButton1"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              <img src="assets/styles/icons/check.png" alt="">
+            </button>
+          </div>
+        </div>
+      </ng-template>
+
+      <ng-template #motoFilter>
+        <div class="filter-tyres-moto" *ngIf="btnCategoryMoto; else trackFilter">
+          <p>По параметрам</p>
+          <div class="filter-parametr">
+            <button class="filter-btns  dropdown-toggle" type="button" id="dropdownMenuButton1"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              Ширина <img class="filter-arrow" src="assets/styles/icons/arrowDown.png" alt="">
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+              <li>
+                <p class="dropdown-item">195</p>
+              </li>
+              <li>
+                <p class="dropdown-item">205</p>
+              </li>
+              <li>
+                <p class="dropdown-item">215 </p>
+              </li>
+            </ul>
+            <button class="filter-btns  dropdown-toggle" type="button" id="dropdownMenuButton1"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              Профіль <img class="filter-arrow" src="assets/styles/icons/arrowDown.png" alt="">
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+              <li>
+                <p class="dropdown-item">195</p>
+              </li>
+              <li>
+                <p class="dropdown-item">205</p>
+              </li>
+              <li>
+                <p class="dropdown-item">215 </p>
+              </li>
+            </ul>
+            <button class="filter-btns  dropdown-toggle" type="button" id="dropdownMenuButton1"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              Діаметр <img class="filter-arrow" src="assets/styles/icons/arrowDown.png" alt="">
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+              <li>
+                <p class="dropdown-item">195</p>
+              </li>
+              <li>
+                <p class="dropdown-item">205</p>
+              </li>
+              <li>
+                <p class="dropdown-item">215 </p>
+              </li>
+            </ul>
+            <button class="filter-season  dropdown-toggle" type="button" id="dropdownMenuButton1"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              Сезон <img class="filter-arrow" src="assets/styles/icons/arrowDown.png" alt="">
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+              <li>
+                <p class="dropdown-item">195</p>
+              </li>
+              <li>
+                <p class="dropdown-item">205</p>
+              </li>
+              <li>
+                <p class="dropdown-item">215 </p>
+              </li>
+            </ul>
+            <button class="filter-mark  dropdown-toggle" type="button" id="dropdownMenuButton1"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              Бренд <img class="filter-arrow" src="assets/styles/icons/arrowDown.png" alt="">
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+              <li>
+                <p class="dropdown-item">195</p>
+              </li>
+              <li>
+                <p class="dropdown-item">205</p>
+              </li>
+              <li>
+                <p class="dropdown-item">215 </p>
+              </li>
+            </ul>
+            <button class="filter-submit  dropdown-toggle" type="button" id="dropdownMenuButton1"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              <img src="assets/styles/icons/check.png" alt="">
+            </button>
+          </div>
+        </div>
+      </ng-template>
+
+      <ng-template #trackFilter>
+        <div class="filter-tyres-track" *ngIf="btnCategoryTrack; else trackFilter">
+          <p>По параметрам</p>
+          <div class="filter-parametr">
+            <button class="filter-btns  dropdown-toggle" type="button" id="dropdownMenuButton1"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              Ширина <img class="filter-arrow" src="assets/styles/icons/arrowDown.png" alt="">
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+              <li>
+                <p class="dropdown-item">195</p>
+              </li>
+              <li>
+                <p class="dropdown-item">205</p>
+              </li>
+              <li>
+                <p class="dropdown-item">215 </p>
+              </li>
+            </ul>
+            <button class="filter-btns  dropdown-toggle" type="button" id="dropdownMenuButton1"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              Профіль <img class="filter-arrow" src="assets/styles/icons/arrowDown.png" alt="">
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+              <li>
+                <p class="dropdown-item">195</p>
+              </li>
+              <li>
+                <p class="dropdown-item">205</p>
+              </li>
+              <li>
+                <p class="dropdown-item">215 </p>
+              </li>
+            </ul>
+            <button class="filter-btns  dropdown-toggle" type="button" id="dropdownMenuButton1"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              Діаметр <img class="filter-arrow" src="assets/styles/icons/arrowDown.png" alt="">
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+              <li>
+                <p class="dropdown-item">195</p>
+              </li>
+              <li>
+                <p class="dropdown-item">205</p>
+              </li>
+              <li>
+                <p class="dropdown-item">215 </p>
+              </li>
+            </ul>
+            <button class="filter-season  dropdown-toggle" type="button" id="dropdownMenuButton1"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              Вісь <img class="filter-arrow" src="assets/styles/icons/arrowDown.png" alt="">
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+              <li>
+                <p class="dropdown-item">195</p>
+              </li>
+              <li>
+                <p class="dropdown-item">205</p>
+              </li>
+              <li>
+                <p class="dropdown-item">215 </p>
+              </li>
+            </ul>
+            <button class="filter-mark  dropdown-toggle" type="button" id="dropdownMenuButton1"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              Бренд <img class="filter-arrow" src="assets/styles/icons/arrowDown.png" alt="">
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+              <li>
+                <p class="dropdown-item">195</p>
+              </li>
+              <li>
+                <p class="dropdown-item">205</p>
+              </li>
+              <li>
+                <p class="dropdown-item">215 </p>
+              </li>
+            </ul>
+            <button class="filter-submit  dropdown-toggle" type="button" id="dropdownMenuButton1"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              <img src="assets/styles/icons/check.png" alt="">
+            </button>
+          </div>
+        </div>
+      </ng-template>
+
+
+
+      <div class="filter-auto" *ngIf="btnCategoryTyres || btnCategoryDisk ">
+        <p>По авто</p>
+        <div class="filter-car">
+          <button class="filter-btns  dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            Марка <img class="filter-arrow" src="assets/styles/icons/arrowDown.png" alt="">
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+            <li>
+              <p class="dropdown-item">195</p>
+            </li>
+            <li>
+              <p class="dropdown-item">205</p>
+            </li>
+            <li>
+              <p class="dropdown-item">215 </p>
+            </li>
+          </ul>
+          <button class="filter-model  dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            Модель <img class="filter-arrow" src="assets/styles/icons/arrowDown.png" alt="">
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+            <li>
+              <p class="dropdown-item">195</p>
+            </li>
+            <li>
+              <p class="dropdown-item">205</p>
+            </li>
+            <li>
+              <p class="dropdown-item">215 </p>
+            </li>
+          </ul>
+          <button class="filter-btns  dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            Рік <img class="filter-arrow" src="assets/styles/icons/arrowDown.png" alt="">
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+            <li>
+              <p class="dropdown-item">195</p>
+            </li>
+            <li>
+              <p class="dropdown-item">205</p>
+            </li>
+            <li>
+              <p class="dropdown-item">215 </p>
+            </li>
+          </ul>
+          <button class="filter-modification  dropdown-toggle" type="button" id="dropdownMenuButton1"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            Модифікація <img class="filter-arrow" src="assets/styles/icons/arrowDown.png" alt="">
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+            <li>
+              <p class="dropdown-item">195</p>
+            </li>
+            <li>
+              <p class="dropdown-item">205</p>
+            </li>
+            <li>
+              <p class="dropdown-item">215 </p>
+            </li>
+          </ul>
+          <button class="filter-submit  dropdown-toggle" type="button" id="dropdownMenuButton1"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="assets/styles/icons/check.png" alt="">
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="advantages">
+    <div class="advantages-block">
+      <h4>Економно</h4>
+      <p>Працюємо напряму з Європейськими складами, виключаємо накрутку цін зі сторони посередника</p>
+    </div>
+    <div class="advantages-block">
+      <h4>Свіжі шини</h4>
+      <p>100% оригінальні шини не старші 2-ох років. Шини зберігаються в правильних умовах, що продовжує термін служби
+      </p>
+    </div>
+    <div class="advantages-block">
+      <h4>Свій склад</h4>
+      <p>Доставляємо шини в термін від 3-4 днів Відправляємо Новою поштою, Міст Експрес, Інтайм</p>
+    </div>
+    <div class="advantages-block">
+      <h4>Турбота та консультація</h4>
+      <p>Ми слідкуємо за новинами ринку, тому пропонуємо вам тільки найкращі пропозиції</p>
+    </div>
+  </div>
+
+  <div class="category">
+    <div class="category-news">
+      <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+            aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+            aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+            aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="assets/styles/images/banner.png" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="assets/styles/images/banner.png" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="assets/styles/images/banner.png" class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+    <div class="category-products">
+      <button type="button" (click)="navigateTo('tyres')" class="category-products-product">
+        <img src="assets/styles/images/carTire.png" alt="">
+        <p>Автошини</p>
+      </button>
+      <button type="button"(click)="navigateTo('moto')" class="category-products-product-moto">
+        <img src="assets/styles/images/motoTire.png" alt="">
+        <p>Мотошини</p>
+      </button>
+      <button type="button" (click)="navigateTo('wheels')" class="category-products-product">
+        <img src="assets/styles/images/wheel.png" alt="">
+        <p>Диски</p>
+      </button>
+      <button type="button" (click)="navigateTo('track')" class="category-products-product">
+        <img src="assets/styles/images/track.png" alt="">
+        <p>Грузові шини</p>
+      </button>
+    </div>
+  </div>
+
+  <div class="slider">
+    <div class="slide-track">
+      <div class="slide">
+        <img src="assets/styles/images/bridg.png"  alt="" />
+      </div>
+      <div class="slide">
+        <img src="assets/styles/images/cordiant.png"  alt="" />
+      </div>
+      <div class="slide">
+        <img src="assets/styles/images/cont.png"  alt="" />
+      </div>
+      <div class="slide">
+        <img src="assets/styles/images/dunl.png"  alt="" />
+      </div>
+      <div class="slide">
+        <img src="assets/styles/images/mich.png" alt="" />
+      </div>
+      <div class="slide">
+        <img src="assets/styles/images/bridg.png"  alt="" />
+      </div>
+      <div class="slide">
+        <img src="assets/styles/images/cordiant.png" alt="" />
+      </div>
+      <div class="slide">
+        <img src="assets/styles/images/cont.png"  alt="" />
+      </div>
+      <div class="slide">
+        <img src="assets/styles/images/dunl.png" alt="" />
+      </div>
+      <div class="slide">
+        <img src="assets/styles/images/mich.png"  alt="" />
+      </div>
+    </div>
+  </div>
+
+  <!-- <div class="slideBrand">
+    <button><img src="assets/styles/icons/arrowLeft.png" alt=""></button>
+    <div class="slideBrand-logo">
+      <img src="assets/styles/images/bridg.png" alt="">
+      <img src="assets/styles/images/cont.png" alt="">
+      <img src="assets/styles/images/cordiant.png" alt="">
+      <img src="assets/styles/images/dunl.png" alt="">
+      <img src="assets/styles/images/mich.png" alt="">
+    </div>
+    <button><img src="assets/styles/icons/arrowRight.png" alt=""></button>
+  </div> -->
+
+  <div class="season">
+    <button type="button" class="season-categories-summer" (click)="searchProductBySeason('Літні')">
+      <div class="season-categories-summer-icon">
+        <img src="assets/styles/icons/summer.png"  alt="">
+        <p>Літні шини</p>
+      </div>
+      <img src="assets/styles/images/summerTire.png"  style="
+      position: absolute;" alt="">
+    </button>
+    <button type="button" class="season-categories-winter" (click)="searchProductBySeason('Зимові')">
+      <div class="season-categories-winter-icon">
+        <img src="assets/styles/icons/winter.png" alt="">
+        <p>Зимові шини</p>
+      </div>
+      <img src="assets/styles/images/winterTire.png" style="
+      position: absolute;" alt="">
+
+    </button>
+    <button type="button" class="season-categories-demi"  (click)="searchProductBySeason('Всесезонні')">
+      <div class="season-categories-demi-icon">
+        <img src="assets/styles/icons/demiseason.png" alt="">
+        <p>Всесезонні шини</p>
+      </div>
+      <img src="assets/styles/images/demiTyre.png" style="
+      position: absolute;" alt="">
+    </button>
+  </div>
+
+  <div class="news">
+    <div class="news-header">
+      <p>Поради в блозі</p>
+      <a href="">Перейти в блог <img src="assets/styles/icons/arrowRight.png" alt=""></a>
+    </div>
+    <div class="news-box">
+      <div class="news-box-left">
+        <img src="assets/styles/images/newsBaner.png" alt="">
+        <p>Летние шины премиум-класса: актуальные новинки 2018 года</p>
+      </div>
+      <div class="news-box-center">
+        <img src="assets/styles/images/newsBanner2.png" alt="">
+        <p class="news-box-center-title">Советы новичкам</p>
+        <p>Осень близится. Как обезопасить себя на мокрой трассе?</p>
+      </div>
+      <div class="news-box-right">
+        <div class="news-box-right-article">
+          <h4>Новини</h4>
+          <p>QR-коды на боковинах шин – новый метод маркировки резинотехнической продукции</p>
+          <hr>
+        </div>
+        <div class="news-box-right-article">
+          <h4>Новини</h4>
+          <p>QR-коды на боковинах шин – новый метод маркировки резинотехнической продукции</p>
+          <hr>
+        </div>
+        <div class="news-box-right-article">
+          <h4>Новини</h4>
+          <p>QR-коды на боковинах шин – новый метод маркировки резинотехнической продукции</p>
+          <hr>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="feedbacks">
+  <div class="feedbacks-leftBlock">
+    <p>165 покупців <br> вже оцінили наш <br> сервіс и ціни </p>
+    <p class="feedbacks-leftBlock-count"> 8.3 <span> з 10 </span> </p>
+    <div class="feedbacks-leftBlock-logo">
+      <img class="feedbacks-leftBlock-logo-price" src="assets/styles/icons/price.png" alt="">
+      <img class="feedbacks-leftBlock-logo-hotline" src="assets/styles/icons/hotline.svg" alt="">
+      <img class="feedbacks-leftBlock-logo-ashz" src="assets/styles/icons/min.png" alt="">
+    </div>
+  </div>
+  <div class="feedbacks-rightBlock">
+    <div class="feedbacks-rightBlock-feedback">
+      <div class="feedbacks-rightBlock-feedback-estimate">
+        <p>7 <br><span>із 10</span></p>
+        <div class="feedbacks-rightBlock-feedback-estimate-logo">
+          <img src="assets/styles/icons/hotline.svg" alt="">
+        </div>
+      </div>
+      <div class="feedbacks-rightBlock-feedback-block">
+        <div class="feedbacks-rightBlock-feedback-block-header">
+          <p class="feedbacks-rightBlock-feedback-block-header-author">Максим Опришко</p>
+          <p class="feedbacks-rightBlock-feedback-block-header-date">17 вересня 2018</p>
+        </div>
+        <div class="feedbacks-rightBlock-feedback-block-text">
+          <p>Заказывал бескамерную шину - привезли камерку, на шиномонтаже обнаружил через 2 с половиной недели. Сначала
+            при разговоре пытались сослаться на не правильный заказ, после просмотра карты товара предложили заказать
+            ещё раз и оплатить ту что я сразу заказывал. Будьте бдительны! Кстате весть товар под заказ с предоплатой!
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="feedbacks-rightBlock-feedback">
+      <div class="feedbacks-rightBlock-feedback-estimate">
+        <p>7 <br><span>із 10</span></p>
+        <div class="feedbacks-rightBlock-feedback-estimate-logo">
+          <img src="assets/styles/icons/hotline.svg" alt="">
+        </div>
+      </div>
+      <div class="feedbacks-rightBlock-feedback-block">
+        <div class="feedbacks-rightBlock-feedback-block-header">
+          <p class="feedbacks-rightBlock-feedback-block-header-author">Максим Опришко</p>
+          <p class="feedbacks-rightBlock-feedback-block-header-date">17 вересня 2018</p>
+        </div>
+        <div class="feedbacks-rightBlock-feedback-block-text">
+          <p>Заказывал бескамерную шину - привезли камерку, на шиномонтаже обнаружил через 2 с половиной недели. Сначала
+            при разговоре пытались сослаться на не правильный заказ, после просмотра карты товара предложили заказать
+            ещё раз и оплатить ту что я сразу заказывал. Будьте бдительны! Кстате весть товар под заказ с предоплатой!
+          </p>
+        </div>
+      </div>
+    </div>
+    <button type="button" class="more">Більше відгуків</button>
+  </div>
+</div>
+
+<div class="main-container">
+  <div class="text">
+    <h3 class="text-heading">Інтернет-мвгвзин avtoshuz</h3>
+    <p class="text-description">Автошины – самый актуальный вид товара для водителей, которые посещают интернет магазин
+      шин Avtoshuz. Колёса подвергаются интенсивному износу на плохих дорогах нашей страны. Это заставляет владельца
+      транспортного средства искать покрышки по выгодной цене в магазине автошин, вовремя «переобуть» машину и уверенно
+      себя чувствовать на трассе.
+      Подбирайте под сезон: характеристики каучука должны соответствовать температурному режиму, особенностям дорожного
+      полотна и стилю вашей езды. Но где купить шины недорого с гарантией от производителя? Интернет магазин покрышек
+      Avtoshuz осуществляет прямые поставки продукции из Европы. Продажа шин в Украине ведущих марок: Michelin,
+      Goodyear, Pirelli и BF Goodrich возможна с доставкой по всем городам страны.</p>
+  </div>
+</div>

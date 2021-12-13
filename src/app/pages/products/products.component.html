@@ -1,0 +1,83 @@
+<div class="main-container">
+  <div class="content">
+    <app-filter></app-filter>
+    <div class="product">
+      <div class="product-bread-camps">
+        <a (click)="location.back()" >Головна</a>
+        <img src="assets/styles/icons/breadCampsArrow.png" width="4" alt="">
+        <a>Автомобільні шини</a>
+      </div>
+      <h1>Автомобільні шини</h1>
+      <div class="product-sort">
+        <button type="button" class="product-sor-active">З подарком</button>
+        <button type="button">З скидкою</button>
+        <button type="button">Спочатку дешевші</button>
+        <button type="button">Спочатку дорожчі</button>
+        <button type="button">По рейтингу</button>
+      </div>
+      <div class="product-card" *ngFor="let product of productList">
+        <img src="assets/styles/images/tyreProductBig.png" width="138" height="149" alt="">
+        <div class="product-card-info">
+          <p class="product-card-info-title"  [routerLink]="[ product.id ]" >{{product.brand.name + ' ' +product.model}}  {{ product.width.param | slice:0:3 }}/{{ product.height.param | slice:0:2 }} {{ product.dia.param | slice:0:3 }} </p>
+          <div class="product-card-info-details">
+            <div class="product-card-info-details-left">
+              <p>Ширина: <span>{{ '' + product.width.param}}</span></p>
+              <p>Висота: <span>{{ '' + product.height.param}}</span></p>
+              <p>Діаметр: <span>{{ '' + product.dia.param }}</span></p>
+            </div>
+            <div class="product-card-info-details-right">
+              <p>Тип авто: <span>Легкові</span> </p>
+              <p>Індекс скорості: <span>{{product.speed}}</span> </p>
+              <p>Індекс нагрузки : <span>{{product.weight}}</span> </p>
+            </div>
+          </div>
+        </div>
+        <div class="product-card-price">
+          <div class="product-card-price-inStock">
+            <img src="assets/styles/icons/inStock.svg" alt="">
+            <p class="product-card-price-inStock-p">В наявності</p>
+          </div>
+          <p class="product-card-price-p">{{product.price + ' грн'}}</p>
+          <div class="product-card-price-count">
+            <div class="product-card-price-count-box">
+              <span class="" (click)="changeCount(product,false)">-</span>
+              <input type="text" maxlength="3" [value]="product.orderCount">
+              <span class="" (click)="changeCount(product,true)">+</span>
+            </div>
+            <button class="btnPrimary" (click)="addToBasket(product)">Купити</button>
+          </div>
+          <div class="product-card-price-favorite">
+            <img src="assets/styles/icons/like.svg" alt="">
+            <p>В избранное</p>
+          </div>
+        </div>
+      </div>
+      <div class="product-pages">
+          <button type="button"  (click)="pageNum(1)" >1</button>
+          <button type="button"  (click)="pageNum(2)" >2</button>
+          <button type="button"  (click)="pageNum(3)" >3</button>
+        <div class="product-pages-number"></div>
+      </div>
+    </div>
+    <div class="news">
+      <a href="" class="nav">Поради новачкам</a>
+      <div class="news-wrapper">
+        <img src="assets/styles/images/newsOne.png" alt="">
+        <p>Осень близится. Как обезопасить себя на мокрой трассе?</p>
+      </div>
+      <div class="news-wrapper">
+        <img src="assets/styles/images/newsSecond.png" alt="">
+        <p>Осень близится. Как обезопасить себя на мокрой трассе?</p>
+      </div>
+      <div class="news-blog">
+        <a href="">Новини в блозі</a>
+        <p>QR-коды на боковинах шин – новый метод маркировки резинотехнической продукции</p>
+        <hr>
+        <p>Xiaomi представила новую систему контроля давления в шинах</p>
+        <hr>
+        <p>Система аэродинамического моделирования от Toyo Tire</p>
+      </div>
+    </div>
+
+  </div>
+</div>

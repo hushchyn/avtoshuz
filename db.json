@@ -1,0 +1,3408 @@
+{
+  "users": [
+    {
+      "email": "admin@gmail.com",
+      "phone": "0977594201",
+      "password": "qqq111",
+      "firstName": "",
+      "lastName": "",
+      "role": "ADMIN",
+      "id": 1
+    },
+    {
+      "email": "user@gmail.com",
+      "phone": "09876543211",
+      "password": "uuu111",
+      "firstName": null,
+      "lastName": "Іванов",
+      "orders": [
+        {
+          "firstName": "Андрій",
+          "lastName": "Гущин",
+          "email": "hyshchun@gmail.com",
+          "phone": "+380977594201",
+          "delivery": "Нова Пошта",
+          "city": "Львів",
+          "adress": "Чорновола 22",
+          "payment": "Наложенний платіж",
+          "date": "2021-11-25T16:21:47.606Z",
+          "status": "pending",
+          "basket": [
+            {
+              "category": {
+                "name": "tyres",
+                "id": 1
+              },
+              "path": "shyny",
+              "brand": {
+                "name": "Barum"
+              },
+              "model": "Brilliantis 2",
+              "width": {
+                "param": "195 мм"
+              },
+              "height": {
+                "param": "65%"
+              },
+              "dia": {
+                "param": "R15"
+              },
+              "speed": "T -190 км/год",
+              "weight": "91 - 650 кг",
+              "season": {
+                "param": "Літні"
+              },
+              "orderCount": 1,
+              "count": "12",
+              "price": 1250,
+              "imagePath": "url(assets/styles/images/tyreProduct.png)",
+              "id": 12
+            }
+          ]
+        }
+      ],
+      "role": "USER",
+      "id": 2
+    }
+  ],
+  "category": [
+    {
+      "name": "tyres",
+      "id": 1
+    },
+    {
+      "name": "wheels",
+      "id": 2
+    },
+    {
+      "name": "moto",
+      "id": 3
+    },
+    {
+      "name": "track",
+      "id": 4
+    }
+  ],
+  "parameters": [
+    {
+      "brands": [
+        {
+          "name": "Achilles"
+        },
+        {
+          "name": "Aeolus"
+        },
+        {
+          "name": "Aplus"
+        },
+        {
+          "name": "Atturo"
+        },
+        {
+          "name": "Barum"
+        },
+        {
+          "name": "Белшина"
+        },
+        {
+          "name": "BF Goodrich"
+        },
+        {
+          "name": "Blacklion"
+        },
+        {
+          "name": "Bridgestone"
+        },
+        {
+          "name": "Chengshan"
+        },
+        {
+          "name": "Continental"
+        },
+        {
+          "name": "Contyre"
+        },
+        {
+          "name": "Cooper"
+        },
+        {
+          "name": "Cordiant"
+        },
+        {
+          "name": "Davanti"
+        },
+        {
+          "name": "Debica"
+        },
+        {
+          "name": "Diplomat"
+        },
+        {
+          "name": "Dunlop"
+        },
+        {
+          "name": "Evergreen"
+        },
+        {
+          "name": "Falken"
+        },
+        {
+          "name": "Federal"
+        },
+        {
+          "name": "Firestone"
+        },
+        {
+          "name": "Fulda"
+        },
+        {
+          "name": "General Tire"
+        },
+        {
+          "name": "Gislaved"
+        },
+        {
+          "name": "GoodYear"
+        },
+        {
+          "name": "Hankook"
+        },
+        {
+          "name": "Hifly"
+        },
+        {
+          "name": "Kapsen"
+        },
+        {
+          "name": "Kelly"
+        },
+        {
+          "name": "Kleber"
+        },
+        {
+          "name": "Kormoran"
+        },
+        {
+          "name": "Kumho"
+        },
+        {
+          "name": "Lassa"
+        },
+        {
+          "name": "Laufenn"
+        },
+        {
+          "name": "Ling Long"
+        },
+        {
+          "name": "Marshal"
+        },
+        {
+          "name": "Matador"
+        },
+        {
+          "name": "Maxxis"
+        },
+        {
+          "name": "Mazzini"
+        },
+        {
+          "name": "Mentor"
+        },
+        {
+          "name": "Michelin"
+        },
+        {
+          "name": "Mirage"
+        },
+        {
+          "name": "Nexen"
+        },
+        {
+          "name": "Nokian"
+        },
+        {
+          "name": "Paxaro"
+        },
+        {
+          "name": "Pirelli"
+        },
+        {
+          "name": "Roadstone"
+        },
+        {
+          "name": "Rosava"
+        },
+        {
+          "name": "Sava"
+        },
+        {
+          "name": "Taurus"
+        },
+        {
+          "name": "Tigar"
+        },
+        {
+          "name": "Toyo"
+        },
+        {
+          "name": "Uniroyal"
+        },
+        {
+          "name": "Vredestein"
+        },
+        {
+          "name": "Yokohama"
+        }
+      ]
+    },
+    {
+      "width": [
+        {
+          "param": "145 мм"
+        },
+        {
+          "param": "155 мм"
+        },
+        {
+          "param": "165 мм"
+        },
+        {
+          "param": "175 мм"
+        },
+        {
+          "param": "185 мм"
+        },
+        {
+          "param": "195 мм"
+        },
+        {
+          "param": "205 мм"
+        },
+        {
+          "param": "215 мм"
+        },
+        {
+          "param": "225 мм"
+        },
+        {
+          "param": "235 мм"
+        },
+        {
+          "param": "245 мм"
+        },
+        {
+          "param": "255 мм"
+        },
+        {
+          "param": "265 мм"
+        },
+        {
+          "param": "275 мм"
+        },
+        {
+          "param": "285 мм"
+        },
+        {
+          "param": "295 мм"
+        },
+        {
+          "param": "305 мм"
+        },
+        {
+          "param": "315 мм"
+        },
+        {
+          "param": "325 мм"
+        }
+      ]
+    },
+    {
+      "height": [
+        {
+          "param": "30%"
+        },
+        {
+          "param": "35%"
+        },
+        {
+          "param": "40%"
+        },
+        {
+          "param": "45%"
+        },
+        {
+          "param": "50%"
+        },
+        {
+          "param": "55%"
+        },
+        {
+          "param": "60%"
+        },
+        {
+          "param": "65%"
+        },
+        {
+          "param": "70%"
+        },
+        {
+          "param": "75%"
+        },
+        {
+          "param": "80%"
+        },
+        {
+          "param": "85%"
+        }
+      ]
+    },
+    {
+      "radius": [
+        {
+          "param": "R12"
+        },
+        {
+          "param": "R12C"
+        },
+        {
+          "param": "R13"
+        },
+        {
+          "param": "R13C"
+        },
+        {
+          "param": "R14"
+        },
+        {
+          "param": "R14C"
+        },
+        {
+          "param": "R15"
+        },
+        {
+          "param": "R15C"
+        },
+        {
+          "param": "R16"
+        },
+        {
+          "param": "R16C"
+        },
+        {
+          "param": "R17"
+        },
+        {
+          "param": "R17C"
+        },
+        {
+          "param": "R18"
+        },
+        {
+          "param": "R19"
+        },
+        {
+          "param": "R20"
+        },
+        {
+          "param": "R21"
+        },
+        {
+          "param": "R22"
+        }
+      ]
+    },
+    {
+      "season": [
+        {
+          "param": "Літні"
+        },
+        {
+          "param": "Зимові"
+        },
+        {
+          "param": "Всесезонні"
+        }
+      ]
+    },
+    {
+      "brands": [
+        {
+          "name": "Adora"
+        },
+        {
+          "name": "Advanti"
+        },
+        {
+          "name": "AEZ"
+        },
+        {
+          "name": "Alcar"
+        },
+        {
+          "name": "Aleks"
+        },
+        {
+          "name": "Allante"
+        },
+        {
+          "name": "Alutec"
+        },
+        {
+          "name": "Angel"
+        },
+        {
+          "name": "ATR"
+        },
+        {
+          "name": "ATS"
+        },
+        {
+          "name": "Banzai"
+        },
+        {
+          "name": "Berg"
+        },
+        {
+          "name": "Better"
+        },
+        {
+          "name": "Borbet"
+        },
+        {
+          "name": "Dezent"
+        },
+        {
+          "name": "Disla"
+        },
+        {
+          "name": "Dotz"
+        },
+        {
+          "name": "Disla"
+        },
+        {
+          "name": "Eneki"
+        },
+        {
+          "name": "Enzo"
+        },
+        {
+          "name": "Green Line"
+        },
+        {
+          "name": "Hi-Tech"
+        },
+        {
+          "name": "KFZ"
+        },
+        {
+          "name": "Konig"
+        },
+        {
+          "name": "Kosei"
+        },
+        {
+          "name": "Mak"
+        },
+        {
+          "name": "Maxx"
+        },
+        {
+          "name": "Momo"
+        },
+        {
+          "name": "Onyx"
+        },
+        {
+          "name": "OZ Racing"
+        },
+        {
+          "name": "RC Design"
+        },
+        {
+          "name": "Replay"
+        },
+        {
+          "name": "Replica"
+        },
+        {
+          "name": "Ronal"
+        },
+        {
+          "name": "Storm"
+        },
+        {
+          "name": "TechLine"
+        },
+        {
+          "name": "TRW"
+        },
+        {
+          "name": "TSW"
+        },
+        {
+          "name": "Vossen"
+        },
+        {
+          "name": "WSP Italy"
+        },
+        {
+          "name": "ZW"
+        }
+      ]
+    },
+    {
+      "diametr": [
+        {
+          "param": "R15"
+        },
+        {
+          "param": "R16"
+        },
+        {
+          "param": "R17"
+        },
+        {
+          "param": "R18"
+        },
+        {
+          "param": "R19"
+        },
+        {
+          "param": "R20"
+        },
+        {
+          "param": "R21"
+        },
+        {
+          "param": "R22"
+        }
+      ]
+    },
+    {
+      "width": [
+        {
+          "param": "3"
+        },
+        {
+          "param": "4"
+        },
+        {
+          "param": "4.5"
+        },
+        {
+          "param": "5"
+        },
+        {
+          "param": "5.5"
+        },
+        {
+          "param": "6"
+        },
+        {
+          "param": "6.5"
+        },
+        {
+          "param": "7"
+        },
+        {
+          "param": "7.5"
+        },
+        {
+          "param": "8"
+        },
+        {
+          "param": "8.8"
+        },
+        {
+          "param": "9"
+        },
+        {
+          "param": "9.5"
+        },
+        {
+          "param": "10"
+        },
+        {
+          "param": "10.5"
+        },
+        {
+          "param": "11"
+        },
+        {
+          "param": "11.5"
+        },
+        {
+          "param": "12"
+        },
+        {
+          "param": "12.5"
+        },
+        {
+          "param": "13"
+        },
+        {
+          "param": "14"
+        },
+        {
+          "param": "16"
+        }
+      ]
+    },
+    {
+      "PCD": [
+        {
+          "param": "3x98"
+        },
+        {
+          "param": "3x112"
+        },
+        {
+          "param": "3x225.5"
+        },
+        {
+          "param": "3.256"
+        },
+        {
+          "param": "4x98"
+        },
+        {
+          "param": "4x98/100"
+        },
+        {
+          "param": "4x98/114.3"
+        },
+        {
+          "param": "4x100"
+        },
+        {
+          "param": "4x100/108"
+        },
+        {
+          "param": "4x100/114.3"
+        },
+        {
+          "param": "4x108"
+        },
+        {
+          "param": "4x110"
+        },
+        {
+          "param": "4x112"
+        },
+        {
+          "param": "4x114.3"
+        },
+        {
+          "param": "4x115"
+        },
+        {
+          "param": "4x120"
+        },
+        {
+          "param": "4x137"
+        },
+        {
+          "param": "4x144"
+        },
+        {
+          "param": "4x156"
+        },
+        {
+          "param": "5x98"
+        },
+        {
+          "param": "5x100"
+        },
+        {
+          "param": "5x100/108"
+        },
+        {
+          "param": "5x100/110"
+        },
+        {
+          "param": "5x100/112"
+        },
+        {
+          "param": "5x100/114.3"
+        },
+        {
+          "param": "5x108"
+        },
+        {
+          "param": "5x108/110"
+        },
+        {
+          "param": "5x112"
+        },
+        {
+          "param": "5x112/114.3"
+        },
+        {
+          "param": "5x110/120"
+        },
+        {
+          "param": "5x112"
+        },
+        {
+          "param": "5x112/114.3"
+        },
+        {
+          "param": "5x112/115"
+        },
+        {
+          "param": "5x112/118"
+        },
+        {
+          "param": "5x112/120"
+        },
+        {
+          "param": "5x114"
+        },
+        {
+          "param": "5x114.3"
+        },
+        {
+          "param": "5x114.3/120"
+        },
+        {
+          "param": "5x114.3/130"
+        },
+        {
+          "param": "5x114.3/135"
+        },
+        {
+          "param": "5x115"
+        },
+        {
+          "param": "5x115/118"
+        },
+        {
+          "param": "5x118"
+        },
+        {
+          "param": "5x120/130"
+        },
+        {
+          "param": "5x127"
+        },
+        {
+          "param": "5x130"
+        },
+        {
+          "param": "5x135"
+        },
+        {
+          "param": "5x135/139.7"
+        },
+        {
+          "param": "5x149.7/150"
+        },
+        {
+          "param": "5x150"
+        },
+        {
+          "param": "5x160"
+        },
+        {
+          "param": "5x165"
+        },
+        {
+          "param": "6x114.3"
+        },
+        {
+          "param": "6x120"
+        },
+        {
+          "param": "6x125"
+        },
+        {
+          "param": "6x127"
+        },
+        {
+          "param": "6x130"
+        },
+        {
+          "param": "6x135/139.7"
+        },
+        {
+          "param": "6x170"
+        },
+        {
+          "param": "6x171"
+        },
+        {
+          "param": "6x180"
+        },
+        {
+          "param": "6x190"
+        },
+        {
+          "param": "6x205"
+        },
+        {
+          "param": "6x222"
+        },
+        {
+          "param": "6x245"
+        },
+        {
+          "param": "8x98/100"
+        },
+        {
+          "param": "8x98/108"
+        },
+        {
+          "param": "8x100/114"
+        },
+        {
+          "param": "8x100/114.3"
+        },
+        {
+          "param": "8x108/112"
+        },
+        {
+          "param": "8x108/114.3"
+        },
+        {
+          "param": "8x165"
+        },
+        {
+          "param": "8x199"
+        },
+        {
+          "param": "8x221"
+        },
+        {
+          "param": "8x250"
+        },
+        {
+          "param": "8x275"
+        },
+        {
+          "param": "9x100"
+        },
+        {
+          "param": "10x100"
+        },
+        {
+          "param": "10x100/112"
+        },
+        {
+          "param": "10x100/114.3"
+        },
+        {
+          "param": "10x112/114.3"
+        },
+        {
+          "param": "10x112/120"
+        },
+        {
+          "param": "10x114"
+        },
+        {
+          "param": "10x114.3/120"
+        },
+        {
+          "param": "10x120/130"
+        }
+      ]
+    },
+    {
+      "DIA": [
+        {
+          "param": "54"
+        },
+        {
+          "param": "54.1"
+        },
+        {
+          "param": "56"
+        },
+        {
+          "param": "56.1"
+        },
+        {
+          "param": "56.5"
+        },
+        {
+          "param": "56.56"
+        },
+        {
+          "param": "56.6"
+        },
+        {
+          "param": "56.7"
+        },
+        {
+          "param": "57"
+        },
+        {
+          "param": "57.1"
+        },
+        {
+          "param": "57.6"
+        },
+        {
+          "param": "58"
+        },
+        {
+          "param": "58.1"
+        },
+        {
+          "param": "58.5"
+        },
+        {
+          "param": "58.6"
+        },
+        {
+          "param": "59"
+        },
+        {
+          "param": "59.5"
+        },
+        {
+          "param": "59.6"
+        },
+        {
+          "param": "60"
+        },
+        {
+          "param": "60.1"
+        },
+        {
+          "param": "60.2"
+        },
+        {
+          "param": "60.5"
+        },
+        {
+          "param": "61.1"
+        },
+        {
+          "param": "63"
+        },
+        {
+          "param": "63.3"
+        },
+        {
+          "param": "63.34"
+        },
+        {
+          "param": "63.35"
+        },
+        {
+          "param": "63.4"
+        },
+        {
+          "param": "63.5"
+        },
+        {
+          "param": "64"
+        },
+        {
+          "param": "64.1"
+        },
+        {
+          "param": "64.2"
+        },
+        {
+          "param": "65"
+        },
+        {
+          "param": "66"
+        },
+        {
+          "param": "66.1"
+        },
+        {
+          "param": "66.2"
+        },
+        {
+          "param": "66.4"
+        },
+        {
+          "param": "66.4"
+        },
+        {
+          "param": "66.45"
+        },
+        {
+          "param": "66.5"
+        },
+        {
+          "param": "66.6"
+        },
+        {
+          "param": "66.9"
+        },
+        {
+          "param": "67"
+        },
+        {
+          "param": "67.1"
+        },
+        {
+          "param": "68"
+        },
+        {
+          "param": "69"
+        },
+        {
+          "param": "69.1"
+        },
+        {
+          "param": "69.3"
+        },
+        {
+          "param": "70"
+        },
+        {
+          "param": "70.1"
+        },
+        {
+          "param": "70.2"
+        },
+        {
+          "param": "70.3"
+        },
+        {
+          "param": "70.5"
+        },
+        {
+          "param": "70.6"
+        },
+        {
+          "param": "70.7"
+        },
+        {
+          "param": "71"
+        },
+        {
+          "param": "71.1"
+        },
+        {
+          "param": "71.3"
+        },
+        {
+          "param": "71.4"
+        },
+        {
+          "param": "71.5"
+        },
+        {
+          "param": "71.6"
+        },
+        {
+          "param": "72"
+        },
+        {
+          "param": "72.1"
+        },
+        {
+          "param": "72.2"
+        },
+        {
+          "param": "72.3"
+        },
+        {
+          "param": "72.4"
+        },
+        {
+          "param": "72.5"
+        },
+        {
+          "param": "72.56"
+        },
+        {
+          "param": "72.56"
+        },
+        {
+          "param": "73"
+        },
+        {
+          "param": "73.1"
+        },
+        {
+          "param": "73.2"
+        },
+        {
+          "param": "74.1"
+        },
+        {
+          "param": "75.1"
+        },
+        {
+          "param": "76"
+        },
+        {
+          "param": "76.1"
+        },
+        {
+          "param": "77"
+        },
+        {
+          "param": "77.77"
+        },
+        {
+          "param": "77.8"
+        },
+        {
+          "param": "77.9"
+        },
+        {
+          "param": "78"
+        },
+        {
+          "param": "78.1"
+        },
+        {
+          "param": "79"
+        },
+        {
+          "param": "79.6"
+        },
+        {
+          "param": "82"
+        }
+      ]
+    },
+    {
+      "ET": [
+        {
+          "param": "0"
+        },
+        {
+          "param": "2"
+        },
+        {
+          "param": "3"
+        },
+        {
+          "param": "5"
+        },
+        {
+          "param": "6"
+        },
+        {
+          "param": "7"
+        },
+        {
+          "param": "9"
+        },
+        {
+          "param": "10"
+        },
+        {
+          "param": "11"
+        },
+        {
+          "param": "12"
+        },
+        {
+          "param": "13"
+        },
+        {
+          "param": "14"
+        },
+        {
+          "param": "15"
+        },
+        {
+          "param": "16"
+        },
+        {
+          "param": "17"
+        },
+        {
+          "param": "18"
+        },
+        {
+          "param": "18.5"
+        },
+        {
+          "param": "19"
+        },
+        {
+          "param": "19.1"
+        },
+        {
+          "param": "20"
+        },
+        {
+          "param": "21"
+        },
+        {
+          "param": "22"
+        },
+        {
+          "param": "22.5"
+        },
+        {
+          "param": "23"
+        },
+        {
+          "param": "23.5"
+        },
+        {
+          "param": "24"
+        },
+        {
+          "param": "25"
+        },
+        {
+          "param": "26"
+        },
+        {
+          "param": "27"
+        },
+        {
+          "param": "27.3"
+        },
+        {
+          "param": "28"
+        },
+        {
+          "param": "29"
+        },
+        {
+          "param": "30"
+        },
+        {
+          "param": "31"
+        },
+        {
+          "param": "32"
+        },
+        {
+          "param": "33"
+        },
+        {
+          "param": "34"
+        },
+        {
+          "param": "35"
+        },
+        {
+          "param": "36"
+        },
+        {
+          "param": "36.5"
+        },
+        {
+          "param": "37"
+        },
+        {
+          "param": "37.5"
+        },
+        {
+          "param": "38"
+        },
+        {
+          "param": "38.5"
+        },
+        {
+          "param": "39"
+        },
+        {
+          "param": "39.5"
+        },
+        {
+          "param": "40"
+        },
+        {
+          "param": "40.5"
+        },
+        {
+          "param": "41"
+        },
+        {
+          "param": "41.3"
+        },
+        {
+          "param": "41.5"
+        },
+        {
+          "param": "42"
+        },
+        {
+          "param": "42.5"
+        },
+        {
+          "param": "42.7"
+        },
+        {
+          "param": "43"
+        },
+        {
+          "param": "43.5"
+        },
+        {
+          "param": "44"
+        },
+        {
+          "param": "44.5"
+        },
+        {
+          "param": "45"
+        },
+        {
+          "param": "46"
+        },
+        {
+          "param": "47"
+        },
+        {
+          "param": "47.5"
+        },
+        {
+          "param": "48"
+        },
+        {
+          "param": "48.5"
+        },
+        {
+          "param": "49"
+        },
+        {
+          "param": "49.5"
+        },
+        {
+          "param": "50"
+        },
+        {
+          "param": "50.1"
+        },
+        {
+          "param": "50.5"
+        },
+        {
+          "param": "50.8"
+        },
+        {
+          "param": "51"
+        },
+        {
+          "param": "52"
+        },
+        {
+          "param": "52.5"
+        },
+        {
+          "param": "53"
+        },
+        {
+          "param": "54"
+        },
+        {
+          "param": "55"
+        },
+        {
+          "param": "55.5"
+        },
+        {
+          "param": "56"
+        },
+        {
+          "param": "56.4"
+        },
+        {
+          "param": "57"
+        },
+        {
+          "param": "58"
+        },
+        {
+          "param": "59"
+        },
+        {
+          "param": "60"
+        },
+        {
+          "param": "61"
+        },
+        {
+          "param": "62"
+        },
+        {
+          "param": "63"
+        },
+        {
+          "param": "64"
+        },
+        {
+          "param": "65"
+        },
+        {
+          "param": "66"
+        },
+        {
+          "param": "67"
+        },
+        {
+          "param": "68"
+        },
+        {
+          "param": "69"
+        },
+        {
+          "param": "70"
+        },
+        {
+          "param": "71"
+        },
+        {
+          "param": "75"
+        },
+        {
+          "param": "83"
+        },
+        {
+          "param": "96"
+        },
+        {
+          "param": "102"
+        },
+        {
+          "param": "105"
+        },
+        {
+          "param": "106"
+        },
+        {
+          "param": "108"
+        },
+        {
+          "param": "115"
+        },
+        {
+          "param": "116"
+        },
+        {
+          "param": "117"
+        },
+        {
+          "param": "120"
+        },
+        {
+          "param": "121.5"
+        },
+        {
+          "param": "123"
+        },
+        {
+          "param": "124"
+        },
+        {
+          "param": "125"
+        },
+        {
+          "param": "127"
+        },
+        {
+          "param": "127.5"
+        },
+        {
+          "param": "128"
+        },
+        {
+          "param": "128.5"
+        },
+        {
+          "param": "132"
+        },
+        {
+          "param": "133"
+        }
+      ]
+    }
+  ],
+  "products": [
+    {
+      "category": {
+        "name": "wheels",
+        "id": 2
+      },
+      "path": "diski",
+      "brand": "Carbonado",
+      "model": "DYNAMITE BG",
+      "width": "18",
+      "height": "8.0",
+      "dia": "5x120",
+      "speed": "72,6",
+      "weight": "30",
+      "season": "black",
+      "count": "12",
+      "price": 2700,
+      "imagePath": "url(assets/styles/images/diskProduct.png)",
+      "id": 4,
+      "color": "black"
+    },
+    {
+      "category": {
+        "name": "wheels",
+        "id": 2
+      },
+      "path": "diski",
+      "brand": "Carbonado",
+      "model": "DYNAMITE BG",
+      "width": "18",
+      "height": "8.0",
+      "dia": "5x120",
+      "speed": "72,6",
+      "weight": "30",
+      "color": "black",
+      "count": "12",
+      "price": 2700,
+      "imagePath": "url(assets/styles/images/diskProduct.png)",
+      "id": 5
+    },
+    {
+      "category": {
+        "name": "wheels",
+        "id": 2
+      },
+      "path": "diski",
+      "brand": "Carbonado",
+      "model": "DYNAMITE BG",
+      "width": "R18",
+      "height": "8.0",
+      "dia": "5x120",
+      "speed": "72.6",
+      "weight": "30",
+      "color": "silver",
+      "count": "12",
+      "price": 3300,
+      "imagePath": "url(assets/styles/images/diskProduct.png)",
+      "id": 6
+    },
+    {
+      "category": {
+        "name": "moto",
+        "id": 3
+      },
+      "path": "moto",
+      "brand": "Michelin",
+      "model": "Pilot Power",
+      "width": "170",
+      "height": "70",
+      "dia": "R17",
+      "season": "літо",
+      "count": "12",
+      "price": 1100,
+      "imagePath": "url(assets/styles/images/motoProduct.jpg)",
+      "id": 8
+    },
+    {
+      "category": {
+        "name": "moto",
+        "id": 3
+      },
+      "path": "moto",
+      "brand": "Michelin",
+      "model": "Pilot Power",
+      "width": "170",
+      "height": "70",
+      "dia": "R17",
+      "season": "літо",
+      "count": "12",
+      "price": 1100,
+      "imagePath": "url(assets/styles/images/motoProduct.jpg)",
+      "id": 9
+    },
+    {
+      "category": {
+        "name": "track",
+        "id": 4
+      },
+      "path": "track",
+      "brand": "MIchelin",
+      "model": "Armorsteel KTR",
+      "width": "385",
+      "height": "65",
+      "dia": "R22.5",
+      "type": "Ведуча",
+      "season": "всесезон",
+      "count": "12",
+      "price": 5600,
+      "imagePath": "url(assets/styles/images/motoProduct.jpg)",
+      "id": 10
+    },
+    {
+      "category": {
+        "name": "track",
+        "id": 4
+      },
+      "path": "track",
+      "brand": "Hankook",
+      "model": "Smart Flex DH35 ",
+      "width": "385",
+      "height": "65",
+      "dia": "R22.5",
+      "type": "прицепна",
+      "season": "всесезон",
+      "count": "12",
+      "price": 6350,
+      "imagePath": "url(assets/styles/images/motoProduct.jpg)",
+      "id": 11
+    },
+    {
+      "category": {
+        "name": "tyres",
+        "id": 1
+      },
+      "path": "shyny",
+      "brand": {
+        "name": "Barum"
+      },
+      "model": "Brilliantis 2",
+      "width": {
+        "param": "195 мм"
+      },
+      "height": {
+        "param": "65%"
+      },
+      "dia": {
+        "param": "R15"
+      },
+      "speed": "T -190 км/год",
+      "weight": "91 - 650 кг",
+      "season": {
+        "param": "Літні"
+      },
+      "orderCount": 1,
+      "count": "12",
+      "price": 1250,
+      "imagePath": "url(assets/styles/images/tyreProduct.png)",
+      "id": 12
+    },
+    {
+      "category": {
+        "name": "tyres",
+        "id": 1
+      },
+      "path": "shyny",
+      "brand": {
+        "name": "Bridgestone"
+      },
+      "model": "Turanza T001",
+      "width": {
+        "param": "205 мм"
+      },
+      "height": {
+        "param": "55%"
+      },
+      "dia": {
+        "param": "R16"
+      },
+      "speed": "H-210 км/год",
+      "weight": "91 - 650кг",
+      "season": {
+        "param": "Літні"
+      },
+      "orderCount": 1,
+      "count": "12",
+      "price": 1800,
+      "imagePath": "url(assets/styles/images/tyreProduct.png)",
+      "id": 13
+    },
+    {
+      "category": {
+        "name": "tyres",
+        "id": 1
+      },
+      "path": "shyny",
+      "brand": {
+        "name": "Continental"
+      },
+      "model": "WinterContact",
+      "width": {
+        "param": "215 мм"
+      },
+      "height": {
+        "param": "65%"
+      },
+      "dia": {
+        "param": "R16"
+      },
+      "speed": "H-210 км/год",
+      "weight": "100 - 700кг",
+      "season": {
+        "param": "Зимові"
+      },
+      "orderCount": 1,
+      "count": "12",
+      "price": 2300,
+      "imagePath": "url(assets/styles/images/tyreProduct.png)",
+      "id": 14
+    },
+    {
+      "category": {
+        "name": "tyres",
+        "id": 1
+      },
+      "path": "shyny",
+      "brand": {
+        "name": "Fulda"
+      },
+      "model": "Sport Control",
+      "width": {
+        "param": "245 мм"
+      },
+      "height": {
+        "param": "40%"
+      },
+      "dia": {
+        "param": "R18"
+      },
+      "speed": "W-280 км/год",
+      "weight": "100 - 700 кг",
+      "season": {
+        "param": "Всесезонні"
+      },
+      "orderCount": 1,
+      "count": "12",
+      "price": 3450,
+      "imagePath": "url(assets/styles/images/tyreProduct.png)",
+      "id": 15
+    },
+    {
+      "category": {
+        "name": "tyres",
+        "id": 1
+      },
+      "path": "shyny",
+      "brand": {
+        "name": "Nokian"
+      },
+      "model": "Hakka Black",
+      "width": {
+        "param": "195 мм"
+      },
+      "height": {
+        "param": "60%"
+      },
+      "dia": {
+        "param": "R15"
+      },
+      "speed": "H-210 км/год",
+      "weight": "100 - 650кг",
+      "season": {
+        "param": "Літні"
+      },
+      "orderCount": 1,
+      "count": "12",
+      "price": 1900,
+      "imagePath": "url(assets/styles/images/tyreProduct.png)",
+      "id": 16
+    },
+    {
+      "category": {
+        "name": "tyres",
+        "id": 1
+      },
+      "path": "shyny",
+      "brand": {
+        "name": "Bridgestone"
+      },
+      "model": "Blizzak DM-V2",
+      "width": {
+        "param": "215 мм"
+      },
+      "height": {
+        "param": "70%"
+      },
+      "dia": {
+        "param": "R16"
+      },
+      "speed": "H-210км/год",
+      "weight": "100 - 700 кг",
+      "season": {
+        "param": "Зимові"
+      },
+      "orderCount": 1,
+      "count": "12",
+      "price": 2700,
+      "imagePath": "url(assets/styles/images/tyreProduct.png)",
+      "id": 17
+    },
+    {
+      "category": {
+        "name": "tyres",
+        "id": 1
+      },
+      "path": "shyny",
+      "brand": {
+        "name": "Taurus"
+      },
+      "model": "Winter SUV 201",
+      "width": {
+        "param": "265 мм"
+      },
+      "height": {
+        "param": "65%"
+      },
+      "dia": {
+        "param": "R17"
+      },
+      "speed": "V-240км/год",
+      "weight": "102 - 700кг",
+      "season": {
+        "param": "Зимові"
+      },
+      "orderCount": "1",
+      "count": "12",
+      "price": 3400,
+      "imagePath": null,
+      "id": 18
+    },
+    {
+      "category": {
+        "name": "tyres",
+        "id": 1
+      },
+      "path": "shyny",
+      "brand": {
+        "name": "Uniroyal"
+      },
+      "model": "Rain Sport 3",
+      "width": {
+        "param": "275 мм"
+      },
+      "height": {
+        "param": "40%"
+      },
+      "dia": {
+        "param": "R19"
+      },
+      "speed": "W - 300 км/год",
+      "weight": "98 - 680кг",
+      "season": {
+        "param": "Літні"
+      },
+      "orderCount": "1",
+      "count": "12",
+      "price": 5400,
+      "imagePath": null,
+      "id": 19
+    },
+    {
+      "category": {
+        "name": "tyres",
+        "id": 1
+      },
+      "path": "shyny",
+      "brand": {
+        "name": "Michelin"
+      },
+      "model": "CrossClimate",
+      "width": {
+        "param": "245 мм"
+      },
+      "height": {
+        "param": "40%"
+      },
+      "dia": {
+        "param": "R18"
+      },
+      "speed": "V-240 км/год",
+      "weight": "100 - 650кг",
+      "season": {
+        "param": "Всесезонні"
+      },
+      "orderCount": 1,
+      "count": "12",
+      "price": 3250,
+      "imagePath": "url(assets/styles/images/tyreProduct.png)",
+      "id": 20
+    }
+  ],
+  "orders": [
+    {
+      "firstName": "qqq",
+      "lastName": "qqq",
+      "email": "qqq",
+      "phone": "qqq",
+      "delivery": "Нова Пошта",
+      "city": "qqq",
+      "adress": "qqq",
+      "payment": "Приват 24",
+      "date": "2021-11-25T11:09:08.612Z",
+      "status": "pending",
+      "basket": [
+        {
+          "category": {
+            "name": "tyres",
+            "id": 1
+          },
+          "path": "shyny",
+          "brand": {
+            "name": "Barum"
+          },
+          "model": "Brilliantis 2",
+          "width": {
+            "param": "195 мм"
+          },
+          "height": {
+            "param": "65%"
+          },
+          "dia": {
+            "param": "R15"
+          },
+          "speed": "T -190 км/год",
+          "weight": "91 - 650 кг",
+          "season": {
+            "param": "Літні"
+          },
+          "orderCount": 1,
+          "count": "12",
+          "price": 1250,
+          "imagePath": "url(assets/styles/images/tyreProduct.png)",
+          "id": 12
+        }
+      ],
+      "id": 1
+    },
+    {
+      "firstName": "aaa",
+      "lastName": "aaa",
+      "email": "aaa",
+      "phone": "aaa",
+      "delivery": "Нова Пошта",
+      "city": "aaa",
+      "adress": "aaa",
+      "payment": "Наложенний платіж",
+      "date": "2021-11-25T11:11:41.443Z",
+      "status": "pending",
+      "basket": [
+        {
+          "category": {
+            "name": "tyres",
+            "id": 1
+          },
+          "path": "shyny",
+          "brand": {
+            "name": "Barum"
+          },
+          "model": "Brilliantis 2",
+          "width": {
+            "param": "195 мм"
+          },
+          "height": {
+            "param": "65%"
+          },
+          "dia": {
+            "param": "R15"
+          },
+          "speed": "T -190 км/год",
+          "weight": "91 - 650 кг",
+          "season": {
+            "param": "Літні"
+          },
+          "orderCount": 1,
+          "count": "12",
+          "price": 1250,
+          "imagePath": "url(assets/styles/images/tyreProduct.png)",
+          "id": 12
+        }
+      ],
+      "id": 2
+    },
+    {
+      "firstName": "zzz",
+      "lastName": "zzz",
+      "email": "zzz",
+      "phone": "zzz",
+      "delivery": "Нова Пошта",
+      "city": "zzz",
+      "adress": "zzz",
+      "payment": "Приват 24",
+      "date": "2021-11-25T11:14:51.914Z",
+      "status": "pending",
+      "basket": [
+        {
+          "category": {
+            "name": "tyres",
+            "id": 1
+          },
+          "path": "shyny",
+          "brand": {
+            "name": "Barum"
+          },
+          "model": "Brilliantis 2",
+          "width": {
+            "param": "195 мм"
+          },
+          "height": {
+            "param": "65%"
+          },
+          "dia": {
+            "param": "R15"
+          },
+          "speed": "T -190 км/год",
+          "weight": "91 - 650 кг",
+          "season": {
+            "param": "Літні"
+          },
+          "orderCount": 1,
+          "count": "12",
+          "price": 1250,
+          "imagePath": "url(assets/styles/images/tyreProduct.png)",
+          "id": 12
+        }
+      ],
+      "id": 3
+    },
+    {
+      "firstName": "asdasdasdasdasda",
+      "lastName": "asdasd",
+      "email": "asdasd",
+      "phone": "asdads",
+      "delivery": "Нова Пошта",
+      "city": "asdasdas",
+      "adress": "asdasd",
+      "payment": "Приват 24",
+      "date": "2021-11-25T11:49:38.460Z",
+      "status": "pending",
+      "basket": [
+        {
+          "category": {
+            "name": "tyres",
+            "id": 1
+          },
+          "path": "shyny",
+          "brand": {
+            "name": "Barum"
+          },
+          "model": "Brilliantis 2",
+          "width": {
+            "param": "195 мм"
+          },
+          "height": {
+            "param": "65%"
+          },
+          "dia": {
+            "param": "R15"
+          },
+          "speed": "T -190 км/год",
+          "weight": "91 - 650 кг",
+          "season": {
+            "param": "Літні"
+          },
+          "orderCount": 1,
+          "count": "12",
+          "price": 1250,
+          "imagePath": "url(assets/styles/images/tyreProduct.png)",
+          "id": 12
+        }
+      ],
+      "id": 4
+    },
+    {
+      "firstName": "ddd",
+      "lastName": "ddd",
+      "email": "dd",
+      "phone": "ddd",
+      "delivery": "Міст Експрес",
+      "city": "ddd",
+      "adress": "dd",
+      "payment": "Наложенний платіж",
+      "date": "2021-11-25T11:53:42.957Z",
+      "status": "pending",
+      "basket": [
+        {
+          "category": {
+            "name": "tyres",
+            "id": 1
+          },
+          "path": "shyny",
+          "brand": {
+            "name": "Barum"
+          },
+          "model": "Brilliantis 2",
+          "width": {
+            "param": "195 мм"
+          },
+          "height": {
+            "param": "65%"
+          },
+          "dia": {
+            "param": "R15"
+          },
+          "speed": "T -190 км/год",
+          "weight": "91 - 650 кг",
+          "season": {
+            "param": "Літні"
+          },
+          "orderCount": 1,
+          "count": "12",
+          "price": 1250,
+          "imagePath": "url(assets/styles/images/tyreProduct.png)",
+          "id": 12
+        }
+      ],
+      "id": 5
+    },
+    {
+      "firstName": "ccccccc",
+      "lastName": "cccccccc",
+      "email": "ccc",
+      "phone": "cc",
+      "delivery": "Міст Експрес",
+      "city": "ccc",
+      "adress": "cc",
+      "payment": "Наложенний платіж",
+      "date": "2021-11-25T11:55:14.056Z",
+      "status": "pending",
+      "basket": [
+        {
+          "category": {
+            "name": "tyres",
+            "id": 1
+          },
+          "path": "shyny",
+          "brand": {
+            "name": "Barum"
+          },
+          "model": "Brilliantis 2",
+          "width": {
+            "param": "195 мм"
+          },
+          "height": {
+            "param": "65%"
+          },
+          "dia": {
+            "param": "R15"
+          },
+          "speed": "T -190 км/год",
+          "weight": "91 - 650 кг",
+          "season": {
+            "param": "Літні"
+          },
+          "orderCount": 1,
+          "count": "12",
+          "price": 1250,
+          "imagePath": "url(assets/styles/images/tyreProduct.png)",
+          "id": 12
+        }
+      ],
+      "id": 6
+    },
+    {
+      "firstName": "sdfsdf",
+      "lastName": "kjb",
+      "email": "kjb",
+      "phone": "kjb",
+      "delivery": "Нова Пошта",
+      "city": "ljn",
+      "adress": "kjn",
+      "payment": "Приват 24",
+      "date": "2021-11-25T12:14:31.987Z",
+      "status": "pending",
+      "basket": [
+        {
+          "category": {
+            "name": "tyres",
+            "id": 1
+          },
+          "path": "shyny",
+          "brand": {
+            "name": "Barum"
+          },
+          "model": "Brilliantis 2",
+          "width": {
+            "param": "195 мм"
+          },
+          "height": {
+            "param": "65%"
+          },
+          "dia": {
+            "param": "R15"
+          },
+          "speed": "T -190 км/год",
+          "weight": "91 - 650 кг",
+          "season": {
+            "param": "Літні"
+          },
+          "orderCount": 1,
+          "count": "12",
+          "price": 1250,
+          "imagePath": "url(assets/styles/images/tyreProduct.png)",
+          "id": 12
+        }
+      ],
+      "id": 7
+    },
+    {
+      "firstName": "qwe",
+      "lastName": "qwe",
+      "email": "qwe",
+      "phone": "qwe",
+      "delivery": "Самовивіз",
+      "city": "qwe",
+      "adress": "qwe",
+      "payment": "Наложенний платіж",
+      "date": "2021-11-25T13:08:24.284Z",
+      "status": "pending",
+      "basket": [
+        {
+          "category": {
+            "name": "tyres",
+            "id": 1
+          },
+          "path": "shyny",
+          "brand": {
+            "name": "Barum"
+          },
+          "model": "Brilliantis 2",
+          "width": {
+            "param": "195 мм"
+          },
+          "height": {
+            "param": "65%"
+          },
+          "dia": {
+            "param": "R15"
+          },
+          "speed": "T -190 км/год",
+          "weight": "91 - 650 кг",
+          "season": {
+            "param": "Літні"
+          },
+          "orderCount": 1,
+          "count": "12",
+          "price": 1250,
+          "imagePath": "url(assets/styles/images/tyreProduct.png)",
+          "id": 12
+        }
+      ],
+      "id": 8
+    },
+    {
+      "firstName": "zzz",
+      "lastName": "zzz",
+      "email": "zzz",
+      "phone": "zzz",
+      "delivery": "Нова Пошта",
+      "city": "zzzz",
+      "adress": "zzzz",
+      "payment": "Наложенний платіж",
+      "date": "2021-11-25T13:26:45.696Z",
+      "status": "pending",
+      "basket": [
+        {
+          "category": {
+            "name": "tyres",
+            "id": 1
+          },
+          "path": "shyny",
+          "brand": {
+            "name": "Barum"
+          },
+          "model": "Brilliantis 2",
+          "width": {
+            "param": "195 мм"
+          },
+          "height": {
+            "param": "65%"
+          },
+          "dia": {
+            "param": "R15"
+          },
+          "speed": "T -190 км/год",
+          "weight": "91 - 650 кг",
+          "season": {
+            "param": "Літні"
+          },
+          "orderCount": 1,
+          "count": "12",
+          "price": 1250,
+          "imagePath": "url(assets/styles/images/tyreProduct.png)",
+          "id": 12
+        }
+      ],
+      "id": 9
+    },
+    {
+      "firstName": "xxx",
+      "lastName": "xxx",
+      "email": "xxx",
+      "phone": "xxx",
+      "delivery": "Нова Пошта",
+      "city": "xxx",
+      "adress": "xxx",
+      "payment": "Приват 24",
+      "date": "2021-11-25T13:31:01.415Z",
+      "status": "pending",
+      "basket": [
+        {
+          "category": {
+            "name": "tyres",
+            "id": 1
+          },
+          "path": "shyny",
+          "brand": {
+            "name": "Barum"
+          },
+          "model": "Brilliantis 2",
+          "width": {
+            "param": "195 мм"
+          },
+          "height": {
+            "param": "65%"
+          },
+          "dia": {
+            "param": "R15"
+          },
+          "speed": "T -190 км/год",
+          "weight": "91 - 650 кг",
+          "season": {
+            "param": "Літні"
+          },
+          "orderCount": 1,
+          "count": "12",
+          "price": 1250,
+          "imagePath": "url(assets/styles/images/tyreProduct.png)",
+          "id": 12
+        }
+      ],
+      "id": 10
+    },
+    {
+      "firstName": "Андрій",
+      "lastName": "Гущин",
+      "email": "hyshchun@gmail.com",
+      "phone": "+380977594201",
+      "delivery": "Нова Пошта",
+      "city": "Львів",
+      "adress": "Чорновола 22",
+      "payment": "Наложенний платіж",
+      "date": "2021-11-25T16:21:47.606Z",
+      "status": "pending",
+      "basket": [
+        {
+          "category": {
+            "name": "tyres",
+            "id": 1
+          },
+          "path": "shyny",
+          "brand": {
+            "name": "Barum"
+          },
+          "model": "Brilliantis 2",
+          "width": {
+            "param": "195 мм"
+          },
+          "height": {
+            "param": "65%"
+          },
+          "dia": {
+            "param": "R15"
+          },
+          "speed": "T -190 км/год",
+          "weight": "91 - 650 кг",
+          "season": {
+            "param": "Літні"
+          },
+          "orderCount": 1,
+          "count": "12",
+          "price": 1250,
+          "imagePath": "url(assets/styles/images/tyreProduct.png)",
+          "id": 12
+        }
+      ],
+      "id": 11
+    },
+    {
+      "firstName": "wsdf",
+      "lastName": "sdf",
+      "email": "sdf",
+      "phone": "sdf",
+      "delivery": "Нова Пошта",
+      "city": "sdf",
+      "adress": "sdf",
+      "payment": "Приват 24",
+      "date": "2021-11-26T10:40:13.205Z",
+      "status": "pending",
+      "basket": [
+        {
+          "category": {
+            "name": "tyres",
+            "id": 1
+          },
+          "path": "shyny",
+          "brand": {
+            "name": "Barum"
+          },
+          "model": "Brilliantis 2",
+          "width": {
+            "param": "195 мм"
+          },
+          "height": {
+            "param": "65%"
+          },
+          "dia": {
+            "param": "R15"
+          },
+          "speed": "T -190 км/год",
+          "weight": "91 - 650 кг",
+          "season": {
+            "param": "Літні"
+          },
+          "orderCount": 1,
+          "count": "12",
+          "price": 1250,
+          "imagePath": "url(assets/styles/images/tyreProduct.png)",
+          "id": 12
+        }
+      ],
+      "id": 12
+    },
+    {
+      "firstName": "asd",
+      "lastName": "asd",
+      "email": "asd",
+      "phone": "asd",
+      "delivery": "Нова Пошта",
+      "city": "asd",
+      "adress": "asd",
+      "payment": "Приват 24",
+      "date": "2021-11-26T10:43:20.999Z",
+      "status": "pending",
+      "basket": [
+        {
+          "category": {
+            "name": "tyres",
+            "id": 1
+          },
+          "path": "shyny",
+          "brand": {
+            "name": "Barum"
+          },
+          "model": "Brilliantis 2",
+          "width": {
+            "param": "195 мм"
+          },
+          "height": {
+            "param": "65%"
+          },
+          "dia": {
+            "param": "R15"
+          },
+          "speed": "T -190 км/год",
+          "weight": "91 - 650 кг",
+          "season": {
+            "param": "Літні"
+          },
+          "orderCount": 1,
+          "count": "12",
+          "price": 1250,
+          "imagePath": "url(assets/styles/images/tyreProduct.png)",
+          "id": 12
+        }
+      ],
+      "id": 13
+    },
+    {
+      "firstName": "asd",
+      "lastName": "asd",
+      "email": "asd",
+      "phone": "asd",
+      "delivery": "Нова Пошта",
+      "city": "asd",
+      "adress": "asd",
+      "payment": "Приват 24",
+      "date": "2021-11-26T10:43:20.999Z",
+      "status": "pending",
+      "basket": [
+        {
+          "category": {
+            "name": "tyres",
+            "id": 1
+          },
+          "path": "shyny",
+          "brand": {
+            "name": "Barum"
+          },
+          "model": "Brilliantis 2",
+          "width": {
+            "param": "195 мм"
+          },
+          "height": {
+            "param": "65%"
+          },
+          "dia": {
+            "param": "R15"
+          },
+          "speed": "T -190 км/год",
+          "weight": "91 - 650 кг",
+          "season": {
+            "param": "Літні"
+          },
+          "orderCount": 1,
+          "count": "12",
+          "price": 1250,
+          "imagePath": "url(assets/styles/images/tyreProduct.png)",
+          "id": 12
+        }
+      ],
+      "id": 14
+    },
+    {
+      "firstName": "asdasdasd",
+      "lastName": "asd",
+      "email": "asd",
+      "phone": "asd",
+      "delivery": "Нова Пошта",
+      "city": "asd",
+      "adress": "asd",
+      "payment": "Наложенний платіж",
+      "date": "2021-11-26T10:45:05.094Z",
+      "status": "pending",
+      "basket": [
+        {
+          "category": {
+            "name": "tyres",
+            "id": 1
+          },
+          "path": "shyny",
+          "brand": {
+            "name": "Barum"
+          },
+          "model": "Brilliantis 2",
+          "width": {
+            "param": "195 мм"
+          },
+          "height": {
+            "param": "65%"
+          },
+          "dia": {
+            "param": "R15"
+          },
+          "speed": "T -190 км/год",
+          "weight": "91 - 650 кг",
+          "season": {
+            "param": "Літні"
+          },
+          "orderCount": 1,
+          "count": "12",
+          "price": 1250,
+          "imagePath": "url(assets/styles/images/tyreProduct.png)",
+          "id": 12
+        }
+      ],
+      "id": 15
+    },
+    {
+      "firstName": "a",
+      "lastName": "a",
+      "email": "a",
+      "phone": "a",
+      "delivery": "Нова Пошта",
+      "city": "a",
+      "adress": "a",
+      "payment": "Приват 24",
+      "date": "2021-11-26T10:46:49.899Z",
+      "status": "pending",
+      "basket": [
+        {
+          "category": {
+            "name": "tyres",
+            "id": 1
+          },
+          "path": "shyny",
+          "brand": {
+            "name": "Barum"
+          },
+          "model": "Brilliantis 2",
+          "width": {
+            "param": "195 мм"
+          },
+          "height": {
+            "param": "65%"
+          },
+          "dia": {
+            "param": "R15"
+          },
+          "speed": "T -190 км/год",
+          "weight": "91 - 650 кг",
+          "season": {
+            "param": "Літні"
+          },
+          "orderCount": 1,
+          "count": "12",
+          "price": 1250,
+          "imagePath": "url(assets/styles/images/tyreProduct.png)",
+          "id": 12
+        }
+      ],
+      "id": 16
+    },
+    {
+      "firstName": "qwe",
+      "lastName": "qwe",
+      "email": "qwe",
+      "phone": "qwe",
+      "delivery": "Нова Пошта",
+      "city": "qwe",
+      "adress": "qwe",
+      "payment": "Приват 24",
+      "date": "2021-11-26T10:48:01.595Z",
+      "status": "pending",
+      "basket": [
+        {
+          "category": {
+            "name": "tyres",
+            "id": 1
+          },
+          "path": "shyny",
+          "brand": {
+            "name": "Barum"
+          },
+          "model": "Brilliantis 2",
+          "width": {
+            "param": "195 мм"
+          },
+          "height": {
+            "param": "65%"
+          },
+          "dia": {
+            "param": "R15"
+          },
+          "speed": "T -190 км/год",
+          "weight": "91 - 650 кг",
+          "season": {
+            "param": "Літні"
+          },
+          "orderCount": 1,
+          "count": "12",
+          "price": 1250,
+          "imagePath": "url(assets/styles/images/tyreProduct.png)",
+          "id": 12
+        }
+      ],
+      "id": 17
+    },
+    {
+      "firstName": "qwe",
+      "lastName": "qwe",
+      "email": "qwe",
+      "phone": "qwe",
+      "delivery": "Міст Експрес",
+      "city": "qwe",
+      "adress": "qwe",
+      "payment": "По перерахунку",
+      "date": "2021-11-26T10:48:56.909Z",
+      "status": "pending",
+      "basket": [
+        {
+          "category": {
+            "name": "tyres",
+            "id": 1
+          },
+          "path": "shyny",
+          "brand": {
+            "name": "Barum"
+          },
+          "model": "Brilliantis 2",
+          "width": {
+            "param": "195 мм"
+          },
+          "height": {
+            "param": "65%"
+          },
+          "dia": {
+            "param": "R15"
+          },
+          "speed": "T -190 км/год",
+          "weight": "91 - 650 кг",
+          "season": {
+            "param": "Літні"
+          },
+          "orderCount": 1,
+          "count": "12",
+          "price": 1250,
+          "imagePath": "url(assets/styles/images/tyreProduct.png)",
+          "id": 12
+        }
+      ],
+      "id": 18
+    },
+    {
+      "firstName": "asd",
+      "lastName": "asdasd",
+      "email": "asd",
+      "phone": "asd",
+      "delivery": "Нова Пошта",
+      "city": "asd",
+      "adress": "asd",
+      "payment": "По перерахунку",
+      "date": "2021-11-26T10:51:54.772Z",
+      "status": "pending",
+      "basket": [
+        {
+          "category": {
+            "name": "tyres",
+            "id": 1
+          },
+          "path": "shyny",
+          "brand": {
+            "name": "Barum"
+          },
+          "model": "Brilliantis 2",
+          "width": {
+            "param": "195 мм"
+          },
+          "height": {
+            "param": "65%"
+          },
+          "dia": {
+            "param": "R15"
+          },
+          "speed": "T -190 км/год",
+          "weight": "91 - 650 кг",
+          "season": {
+            "param": "Літні"
+          },
+          "orderCount": 1,
+          "count": "12",
+          "price": 1250,
+          "imagePath": "url(assets/styles/images/tyreProduct.png)",
+          "id": 12
+        }
+      ],
+      "id": 19
+    },
+    {
+      "firstName": "asd",
+      "lastName": "asd",
+      "email": "asd",
+      "phone": "asd",
+      "delivery": "Нова Пошта",
+      "city": "asd",
+      "adress": "asd",
+      "payment": "Приват 24",
+      "date": "2021-11-26T10:55:14.535Z",
+      "status": "pending",
+      "basket": [
+        {
+          "category": {
+            "name": "tyres",
+            "id": 1
+          },
+          "path": "shyny",
+          "brand": {
+            "name": "Barum"
+          },
+          "model": "Brilliantis 2",
+          "width": {
+            "param": "195 мм"
+          },
+          "height": {
+            "param": "65%"
+          },
+          "dia": {
+            "param": "R15"
+          },
+          "speed": "T -190 км/год",
+          "weight": "91 - 650 кг",
+          "season": {
+            "param": "Літні"
+          },
+          "orderCount": 1,
+          "count": "12",
+          "price": 1250,
+          "imagePath": "url(assets/styles/images/tyreProduct.png)",
+          "id": 12
+        }
+      ],
+      "id": 20
+    },
+    {
+      "firstName": "asc",
+      "lastName": "asd",
+      "email": "asd",
+      "phone": "asd",
+      "delivery": "Нова Пошта",
+      "city": "ads",
+      "adress": "asd",
+      "payment": "По перерахунку",
+      "date": "2021-11-26T10:56:24.935Z",
+      "status": "pending",
+      "basket": [
+        {
+          "category": {
+            "name": "tyres",
+            "id": 1
+          },
+          "path": "shyny",
+          "brand": {
+            "name": "Barum"
+          },
+          "model": "Brilliantis 2",
+          "width": {
+            "param": "195 мм"
+          },
+          "height": {
+            "param": "65%"
+          },
+          "dia": {
+            "param": "R15"
+          },
+          "speed": "T -190 км/год",
+          "weight": "91 - 650 кг",
+          "season": {
+            "param": "Літні"
+          },
+          "orderCount": 1,
+          "count": "12",
+          "price": 1250,
+          "imagePath": "url(assets/styles/images/tyreProduct.png)",
+          "id": 12
+        }
+      ],
+      "id": 21
+    },
+    {
+      "firstName": "xxx",
+      "lastName": "xxx",
+      "email": "xx",
+      "phone": "xx",
+      "delivery": "Нова Пошта",
+      "city": "xx",
+      "adress": "xx",
+      "payment": "Приват 24",
+      "date": "2021-11-26T11:03:37.607Z",
+      "status": "pending",
+      "basket": [
+        {
+          "category": {
+            "name": "tyres",
+            "id": 1
+          },
+          "path": "shyny",
+          "brand": {
+            "name": "Barum"
+          },
+          "model": "Brilliantis 2",
+          "width": {
+            "param": "195 мм"
+          },
+          "height": {
+            "param": "65%"
+          },
+          "dia": {
+            "param": "R15"
+          },
+          "speed": "T -190 км/год",
+          "weight": "91 - 650 кг",
+          "season": {
+            "param": "Літні"
+          },
+          "orderCount": 1,
+          "count": "12",
+          "price": 1250,
+          "imagePath": "url(assets/styles/images/tyreProduct.png)",
+          "id": 12
+        }
+      ],
+      "id": 22
+    },
+    {
+      "firstName": "zzz",
+      "lastName": "zzz",
+      "email": "zzz",
+      "phone": "zzz",
+      "delivery": "Нова Пошта",
+      "city": "zzz",
+      "adress": "zzz",
+      "payment": "Наложенний платіж",
+      "date": "2021-11-26T11:09:38.936Z",
+      "status": "pending",
+      "basket": [
+        {
+          "category": {
+            "name": "tyres",
+            "id": 1
+          },
+          "path": "shyny",
+          "brand": {
+            "name": "Barum"
+          },
+          "model": "Brilliantis 2",
+          "width": {
+            "param": "195 мм"
+          },
+          "height": {
+            "param": "65%"
+          },
+          "dia": {
+            "param": "R15"
+          },
+          "speed": "T -190 км/год",
+          "weight": "91 - 650 кг",
+          "season": {
+            "param": "Літні"
+          },
+          "orderCount": 1,
+          "count": "12",
+          "price": 1250,
+          "imagePath": "url(assets/styles/images/tyreProduct.png)",
+          "id": 12
+        }
+      ],
+      "id": 23
+    },
+    {
+      "firstName": "fff",
+      "lastName": "fff",
+      "email": "fff",
+      "phone": "fff",
+      "delivery": "Нова Пошта",
+      "city": "fff",
+      "adress": "fff",
+      "payment": "Наложенний платіж",
+      "date": "2021-11-26T11:11:17.353Z",
+      "status": "pending",
+      "basket": [
+        {
+          "category": {
+            "name": "tyres",
+            "id": 1
+          },
+          "path": "shyny",
+          "brand": {
+            "name": "Barum"
+          },
+          "model": "Brilliantis 2",
+          "width": {
+            "param": "195 мм"
+          },
+          "height": {
+            "param": "65%"
+          },
+          "dia": {
+            "param": "R15"
+          },
+          "speed": "T -190 км/год",
+          "weight": "91 - 650 кг",
+          "season": {
+            "param": "Літні"
+          },
+          "orderCount": 1,
+          "count": "12",
+          "price": 1250,
+          "imagePath": "url(assets/styles/images/tyreProduct.png)",
+          "id": 12
+        }
+      ],
+      "id": 24
+    },
+    {
+      "firstName": "aaaa",
+      "lastName": "aaaaaa",
+      "email": "aaaaaaa",
+      "phone": "aaaaaaa",
+      "delivery": "Нова Пошта",
+      "city": "aaa",
+      "adress": "aaa",
+      "payment": "Наложенний платіж",
+      "date": "2021-11-26T11:14:25.384Z",
+      "status": "pending",
+      "basket": [
+        {
+          "category": {
+            "name": "tyres",
+            "id": 1
+          },
+          "path": "shyny",
+          "brand": {
+            "name": "Barum"
+          },
+          "model": "Brilliantis 2",
+          "width": {
+            "param": "195 мм"
+          },
+          "height": {
+            "param": "65%"
+          },
+          "dia": {
+            "param": "R15"
+          },
+          "speed": "T -190 км/год",
+          "weight": "91 - 650 кг",
+          "season": {
+            "param": "Літні"
+          },
+          "orderCount": 1,
+          "count": "12",
+          "price": 1250,
+          "imagePath": "url(assets/styles/images/tyreProduct.png)",
+          "id": 12
+        }
+      ],
+      "id": 25
+    },
+    {
+      "firstName": "www",
+      "lastName": "www",
+      "email": "www",
+      "phone": "www",
+      "delivery": "Нова Пошта",
+      "city": "www",
+      "adress": "www",
+      "payment": "Наложенний платіж",
+      "date": "2021-11-26T11:18:17.657Z",
+      "status": "pending",
+      "basket": [
+        {
+          "category": {
+            "name": "tyres",
+            "id": 1
+          },
+          "path": "shyny",
+          "brand": {
+            "name": "Barum"
+          },
+          "model": "Brilliantis 2",
+          "width": {
+            "param": "195 мм"
+          },
+          "height": {
+            "param": "65%"
+          },
+          "dia": {
+            "param": "R15"
+          },
+          "speed": "T -190 км/год",
+          "weight": "91 - 650 кг",
+          "season": {
+            "param": "Літні"
+          },
+          "orderCount": 1,
+          "count": "12",
+          "price": 1250,
+          "imagePath": "url(assets/styles/images/tyreProduct.png)",
+          "id": 12
+        }
+      ],
+      "id": 26
+    },
+    {
+      "firstName": "sss",
+      "lastName": "sss",
+      "email": "sss",
+      "phone": "sss",
+      "delivery": "Нова Пошта",
+      "city": "ss",
+      "adress": "ss",
+      "payment": "Приват 24",
+      "date": "2021-11-26T11:20:22.992Z",
+      "status": "pending",
+      "basket": [
+        {
+          "category": {
+            "name": "tyres",
+            "id": 1
+          },
+          "path": "shyny",
+          "brand": {
+            "name": "Barum"
+          },
+          "model": "Brilliantis 2",
+          "width": {
+            "param": "195 мм"
+          },
+          "height": {
+            "param": "65%"
+          },
+          "dia": {
+            "param": "R15"
+          },
+          "speed": "T -190 км/год",
+          "weight": "91 - 650 кг",
+          "season": {
+            "param": "Літні"
+          },
+          "orderCount": 2,
+          "count": "12",
+          "price": 1250,
+          "imagePath": "url(assets/styles/images/tyreProduct.png)",
+          "id": 12
+        }
+      ],
+      "id": 27
+    },
+    {
+      "firstName": "ccc",
+      "lastName": "ccc",
+      "email": "ccc",
+      "phone": "ccc",
+      "delivery": "Міст Експрес",
+      "city": "ccc",
+      "adress": "ccc",
+      "payment": "Наложенний платіж",
+      "date": "2021-11-26T11:22:05.260Z",
+      "status": "pending",
+      "basket": [
+        {
+          "category": {
+            "name": "tyres",
+            "id": 1
+          },
+          "path": "shyny",
+          "brand": {
+            "name": "Barum"
+          },
+          "model": "Brilliantis 2",
+          "width": {
+            "param": "195 мм"
+          },
+          "height": {
+            "param": "65%"
+          },
+          "dia": {
+            "param": "R15"
+          },
+          "speed": "T -190 км/год",
+          "weight": "91 - 650 кг",
+          "season": {
+            "param": "Літні"
+          },
+          "orderCount": 1,
+          "count": "12",
+          "price": 1250,
+          "imagePath": "url(assets/styles/images/tyreProduct.png)",
+          "id": 12
+        }
+      ],
+      "id": 28
+    },
+    {
+      "firstName": "фывфы",
+      "lastName": "фыв",
+      "email": "фыв",
+      "phone": "фыв",
+      "delivery": "Нова Пошта",
+      "city": "фыв",
+      "adress": "фыв",
+      "payment": "Приват 24",
+      "date": "2021-11-26T11:24:13.824Z",
+      "status": "pending",
+      "basket": [
+        {
+          "category": {
+            "name": "tyres",
+            "id": 1
+          },
+          "path": "shyny",
+          "brand": {
+            "name": "Barum"
+          },
+          "model": "Brilliantis 2",
+          "width": {
+            "param": "195 мм"
+          },
+          "height": {
+            "param": "65%"
+          },
+          "dia": {
+            "param": "R15"
+          },
+          "speed": "T -190 км/год",
+          "weight": "91 - 650 кг",
+          "season": {
+            "param": "Літні"
+          },
+          "orderCount": 1,
+          "count": "12",
+          "price": 1250,
+          "imagePath": "url(assets/styles/images/tyreProduct.png)",
+          "id": 12
+        }
+      ],
+      "id": 29
+    },
+    {
+      "firstName": "ddd",
+      "lastName": "ddd",
+      "email": "ddd",
+      "phone": "dd",
+      "delivery": "Нова Пошта",
+      "city": "ddd",
+      "adress": "ddd",
+      "payment": "Наложенний платіж",
+      "date": "2021-11-26T11:26:04.012Z",
+      "status": "pending",
+      "basket": [
+        {
+          "category": {
+            "name": "tyres",
+            "id": 1
+          },
+          "path": "shyny",
+          "brand": {
+            "name": "Barum"
+          },
+          "model": "Brilliantis 2",
+          "width": {
+            "param": "195 мм"
+          },
+          "height": {
+            "param": "65%"
+          },
+          "dia": {
+            "param": "R15"
+          },
+          "speed": "T -190 км/год",
+          "weight": "91 - 650 кг",
+          "season": {
+            "param": "Літні"
+          },
+          "orderCount": 1,
+          "count": "12",
+          "price": 1250,
+          "imagePath": "url(assets/styles/images/tyreProduct.png)",
+          "id": 12
+        }
+      ],
+      "id": 30
+    },
+    {
+      "firstName": "Zx",
+      "lastName": "xz",
+      "email": "zx",
+      "phone": "zx",
+      "delivery": "Нова Пошта",
+      "city": "zx",
+      "adress": "zx",
+      "payment": "Приват 24",
+      "date": "2021-11-26T11:27:12.693Z",
+      "status": "pending",
+      "basket": [
+        {
+          "category": {
+            "name": "tyres",
+            "id": 1
+          },
+          "path": "shyny",
+          "brand": {
+            "name": "Barum"
+          },
+          "model": "Brilliantis 2",
+          "width": {
+            "param": "195 мм"
+          },
+          "height": {
+            "param": "65%"
+          },
+          "dia": {
+            "param": "R15"
+          },
+          "speed": "T -190 км/год",
+          "weight": "91 - 650 кг",
+          "season": {
+            "param": "Літні"
+          },
+          "orderCount": 1,
+          "count": "12",
+          "price": 1250,
+          "imagePath": "url(assets/styles/images/tyreProduct.png)",
+          "id": 12
+        }
+      ],
+      "id": 31
+    },
+    {
+      "firstName": "cc",
+      "lastName": "ccc",
+      "email": "ccc",
+      "phone": "ccc",
+      "delivery": "Нова Пошта",
+      "city": "cc",
+      "adress": "cc",
+      "payment": "Наложенний платіж",
+      "date": "2021-11-26T11:28:17.576Z",
+      "status": "pending",
+      "basket": [
+        {
+          "category": {
+            "name": "tyres",
+            "id": 1
+          },
+          "path": "shyny",
+          "brand": {
+            "name": "Barum"
+          },
+          "model": "Brilliantis 2",
+          "width": {
+            "param": "195 мм"
+          },
+          "height": {
+            "param": "65%"
+          },
+          "dia": {
+            "param": "R15"
+          },
+          "speed": "T -190 км/год",
+          "weight": "91 - 650 кг",
+          "season": {
+            "param": "Літні"
+          },
+          "orderCount": 1,
+          "count": "12",
+          "price": 1250,
+          "imagePath": "url(assets/styles/images/tyreProduct.png)",
+          "id": 12
+        }
+      ],
+      "id": 32
+    },
+    {
+      "firstName": "asd",
+      "lastName": "asd",
+      "email": "asd",
+      "phone": "asd",
+      "delivery": "Нова Пошта",
+      "city": "asd",
+      "adress": "asd",
+      "payment": "Приват 24",
+      "date": "2021-11-26T11:29:10.837Z",
+      "status": "pending",
+      "basket": [
+        {
+          "category": {
+            "name": "tyres",
+            "id": 1
+          },
+          "path": "shyny",
+          "brand": {
+            "name": "Barum"
+          },
+          "model": "Brilliantis 2",
+          "width": {
+            "param": "195 мм"
+          },
+          "height": {
+            "param": "65%"
+          },
+          "dia": {
+            "param": "R15"
+          },
+          "speed": "T -190 км/год",
+          "weight": "91 - 650 кг",
+          "season": {
+            "param": "Літні"
+          },
+          "orderCount": 1,
+          "count": "12",
+          "price": 1250,
+          "imagePath": "url(assets/styles/images/tyreProduct.png)",
+          "id": 12
+        }
+      ],
+      "id": 33
+    }
+  ]
+}

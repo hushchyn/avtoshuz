@@ -1,0 +1,100 @@
+<div class="main-container">
+    <div class="navigate">
+        <div class="navigate-languages">
+            <a class="link" href="">Укр</a>
+        </div>
+        <div class="navigate-link">
+            <a class="link" href="" [routerLink]="[ '/dostavka-optlata' ]" routerLinkActive="active">Доставка і оплата
+            </a>
+            <a class="link" href="" [routerLink]="[ '/admin' ]" routerLinkActive="active">Про нас</a>
+            <a class="link" href="" [routerLink]="[ '/contacts' ]" routerLinkActive="active">Контакти</a>
+        </div>
+        <div class="navigate-profile">
+            <img src="assets/styles/icons/Group48.svg" alt=""> 
+            <a *ngIf="!isAdminLogin && !isUserLogin" type="button" class="link" href="" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight">Ввійти в кабінет</a>
+            <a  *ngIf="isAdminLogin" [routerLink]="[ 'admin' ]" routerLinkActive="active" >Адмін</a>
+            <a *ngIf="isUserLogin" [routerLink]="[ 'profile' ]" routerLinkActive="active" >Hello user</a>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="section-second">
+        <div class="section-second-phone">
+            <div class="section-second-number">
+                <p class="section-second-numbers">0 800 658 07 17</p>
+                <p class="section-second-text">Безплатно з будь-якого номеру</p>
+            </div>
+            <img src="assets/styles/icons/phone.png" alt="">
+        </div>
+        <div class="section-section-logo">
+            <a href="" [routerLink]="[ '/' ]"><img src="assets/styles/images/logo.png" alt=""> </a>
+        </div>
+        <div class="section-second-basket">
+            <div class="section-second-basket-count" *ngIf="total > 0">{{total}}</div>
+            <a href="" class="section-second-savedProduct" [routerLink]="[ 'basket' ]"><img
+                    src="assets/styles/icons/heart.png" alt=""></a>
+            <a href="" [routerLink]="[ 'basket' ]"><img src="assets/styles/icons/basket.png" alt=""></a>
+        </div>
+    </div>
+
+    <div class="navigate-menu">
+        <div class="navigate-menu-link">
+            <a class="nav-link"  (click)="navigateTo('tyres')" routerLinkActive="active">Шини</a>
+            <a class="nav-link"  (click)="navigateTo('wheels')" routerLinkActive="active">Диски</a>
+        </div>
+        <div class="navigate-menu-search">
+            <img src="assets/styles/icons/search.png" alt="">
+            Пошук по назві, бренду, артиклу
+        </div>
+        <div class="navigate-menu-customers">
+            <a class="nav-link" href="" [routerLink]="[ 'news' ]" routerLinkActive="active">Новини</a>
+        </div>
+    </div>
+
+
+
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header">
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close" #close></button>
+        </div>
+        <div class="offcanvas-body">
+            <button type="button" class="btn" [ngClass]="{'btn-active': signInBtn}" (click)="signInActive()">Sign
+                In</button>
+            <button type="button" class="btn" [ngClass]="{'btn-active': signUpBtn}" class="btn"
+                (click)="signUpActive()">Sign
+                Up</button>
+            <form class="mb-3" *ngIf="signInBtn" [formGroup]=formLoginUser>
+                <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com"
+                    formControlName="email">
+                <div *ngIf="formLoginUser.get('email').invalid && formLoginUser.get('email').touched" class="validation">
+                    <small *ngIf="formLoginUser.get('email').errors.required">Поле email не може бути пустим</small>
+                    <small *ngIf="formLoginUser.get('email').errors.email">Введіть корректний email( user@gamil.com )</small>
+                </div>
+                <label for="exampleFormControlInput1" class="form-label mt-4">Password</label>
+                <input type="password" class="form-control" id="exampleFormControlInput1"
+                    placeholder="write your password" formControlName="password">
+                <div *ngIf="formLoginUser.get('password').invalid && formLoginUser.get('password').touched" class="validation">
+                    <small *ngIf="formLoginUser.get('password').errors.required">Пароль не може бути пустим</small>
+                    <small *ngIf="formLoginUser.get('password').errors.minlength">
+                        Давжина повинна бути не менше ніж {{formLoginUser.get('password').errors.minlength.requiredLength}}.
+                        Зараз к-сть символів {{formLoginUser.get('password').errors.minlength.actualLength}}
+                    </small>
+                </div>
+                <button type="button" [disabled]=formLoginUser.invalid class="sign" (click)="signIn()">Sign In</button>
+            </form>
+
+            <form class="mb-3" *ngIf="signUpBtn" [formGroup]=formRegisterUser>
+                <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" formControlName="email" placeholder="name@example.com">
+                <label for="exampleFormControlInput1" class="form-label mt-4">Phone number</label>
+                <input type="text" class="form-control" id="exampleFormControlInput1" formControlName="phone" placeholder="phone number">
+                <label for="exampleFormControlInput1" class="form-label mt-4" >Password</label>
+                <input type="password" class="form-control" id="exampleFormControlInput1"
+                    placeholder="name@example.com" formControlName="password">
+                <button type="button" class="sign"  (click)="resgisterUser()">Sign Up</button>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,110 @@
+<div class="main-container">
+    <p>Oформлення замовлення</p>
+    <div class="order" *ngIf="orderTemlate"  >
+        <form [formGroup]="orderForm" >
+            <div class="order-inform">
+            <div class="order-inform-contact">
+                    <span>
+                        <img src="assets/styles/icons/1.png" alt="">
+                        <h2>Контактні дані</h2>
+                    </span>
+                    <input type="text" class="form-control" formControlName="firstName" placeholder="Ім'я">
+                    <input type="text" class="form-control" formControlName="lastName" placeholder="Фамілія">
+                    <input type="text" class="form-control" formControlName="email" placeholder="Email">
+                    <input type="text" class="form-control" formControlName="phone" placeholder="Телефон">
+            </div>
+            <div class="order-inform-delivery">
+                <span>
+                    <img src="assets/styles/icons/2.png" alt="">
+                    <h2>Спосіб оплати</h2>
+                </span>
+                <div class="order-inform-delivery-company">
+                    <div class="order-inform-delivery-company-group">
+                        <label for="novaPoshta">
+                            <input #novaPoshta type="radio" id="novaPoshta" formControlName="delivery" value="Нова Пошта" (click)="changeDelivery(novaPoshta)" checked> Нова Пошта
+                        </label>
+                        <label for="mist">
+                            <input #mist type="radio" value="Міст Експрес" formControlName="delivery" (click)="changeDelivery(mist)" id="mist">Міст Експрес
+                        </label>
+                        <label for="del">
+                            <input #delivery type="radio" value="Делівері" formControlName="delivery" (click)="changeDelivery(delivery)" id="del">Делівері
+                        </label>
+                        <label for="own">
+                            <input #own type="radio" value="Самовивіз" formControlName="delivery" (click)="changeDelivery(own)" id="own">Самовивіз
+                        </label>
+                    </div>
+                </div>
+                <div class="order-inform-delivery-adress">
+                    <input type="text" class="form-control"  formControlName="city" placeholder="Місто">
+                    <input type="text" class="form-control"  formControlName="adress" placeholder="Адрес">
+                </div>
+            </div>
+            <div class="order-inform-payment">
+                <span>
+                    <img src="assets/styles/icons/3.png" alt="">
+                    <h2>Спосіб оплати</h2>
+                </span>
+                <div class="order-inform-payment-btn">
+                    <label for="cash">
+                        <input #cash type="radio" id="cash" value="Наложенний платіж" formControlName="payment"  (click)="changePayment(cash)"  checked> Наложенний платіж
+                        <br>
+                        <small>По тарифам перевозчика +2%</small>
+                    </label>
+                    <label for="card">
+                        <input #card type="radio" id="card" value="Приват 24" formControlName="payment" (click)="changePayment(card)"> На карту ПриватБанку
+                        <small>Комиссия +1%</small>
+                    </label>
+                    <label for="bankCount">
+                        <input #bankCount type="radio" id="bankCount" value="По перерахунку" formControlName="payment" (click)="changePayment(bankCount)"> По перерахунку
+                        <small>Комиссия +2.5%</small>
+                    </label>
+                </div>
+            </div>
+            </div>
+        </form>   
+
+        <div class="order-product">
+            <div class="order-product-inform">
+                <p>Моє замовлення</p>
+                <div class="order-product-details"  *ngFor="let product of orderProducts">
+                    <img height="96px" src="assets/styles/images/tyreProduct.png" alt="">
+                    <div class="order-product-details-description">
+                        <label for="prod"></label>
+                        <small id="prod">{{product.brand.name + ' ' +product.model}}  {{ product.width.param | slice:0:3 }}/{{ product.height.param | slice:0:2 }} {{ product.dia.param | slice:0:3 }} {{product.weight | slice:0:2}}{{product.speed | slice:0:1}}</small>
+                        <br>
+                        <label  for="count">
+                            <small id="count" >{{product.orderCount + 'шт'}} </small>
+                            <p class="order-product-details-description-p">{{product.orderCount * product.price + ' грн'}}</p>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="order-product-total" >
+                <small>Загальна сума:</small>
+                <p>{{total + ' грн'}}</p>
+            </div>
+            <button type="button" class="btnPrimary-order" [disabled]="orderForm.invalid" (click)="confirmOrder()" > Оформити замовлення</button>
+        </div>
+    </div>
+    <div class="orderNumber" *ngIf="confirmedOrder">
+        <div class="orderNumber-leftBlock">
+            <p> Ваше замовлення прийнято</p>
+            <div class="orderNumber-rout">Мы свяжемся с вами в скором времени для его подтверждения.
+                <a [routerLink]="[ '' ]">На головну</a>
+            </div>
+        </div>
+        <div class="orderNumber-rightBlock">
+            <p>За покупку вам нарахують</p>
+            <h2>300 бонусов</h2>
+            <div class="orderNumber-rightBlock-delivery">
+                <p>Доставка і повернення</p>
+                <ul>
+                    <li>Доставим по Украине в течении 3-4 дней на склад или на ваш адрес</li>
+                    <li>Возрат в течении 14 днейw</li>
+                    <li>Замена заводского брака или полный возрат стоимости</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

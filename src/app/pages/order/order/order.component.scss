@@ -1,0 +1,274 @@
+p {
+  font-size: 32px;
+  font-weight: bold;
+  margin: 40px 0 20px;
+}
+
+h2 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-left: 8px;
+
+}
+
+span {
+  display: flex;
+  height: 28px;
+  margin-bottom: 25px;
+  align-items: center;
+}
+
+input {
+  width: 380px;
+  height: 60px;
+  border-radius: 3px;
+  border-color: #C5C4C4;
+  border: 1px solid #C5C4C4;
+  margin-bottom: 20px;
+}
+
+.order {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+
+  &-inform {
+    width: 900px;
+
+    &-contact {
+      width: 100%;
+      padding: 39px 52px;
+      background-color: #f4f4f4;
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 10px;
+
+    }
+
+    &-delivery {
+      width: 100%;
+      padding: 39px 52px;
+      background-color: #f4f4f4;
+      margin-bottom: 10px;
+
+      label {
+        margin-right: 12px;
+        margin-right: 30px;
+      }
+
+      input {
+        background: inherit;
+        border: none;
+        color: #907857;
+        font-weight: bold;
+        width: 120px;
+        height: 30px;
+
+        &:focus {
+          color: #333333;
+          border-bottom: 2px solid orange;
+        }
+      }
+
+      &-company {
+
+        &-group {
+          width: 71%;
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+
+          label {
+            background: inherit;
+            border: none;
+            color: #907857;
+            font-weight: bold;
+            width: 120px;
+            height: 30px;
+
+            input[type="radio"]:checked+label {
+              border-bottom: 2px solid #333333;
+              border: 1px solid orange;
+            }
+          }
+
+          input[type="radio"]{
+            display: none;
+          }
+        }
+      }
+
+      &-adress {
+        display: flex;
+        justify-content: space-between;
+
+        input {
+          width: 380px;
+          height: 60px;
+          border-radius: 3px;
+          border-color: #C5C4C4;
+          border: 1px solid #C5C4C4;
+          margin-bottom: 20px;
+          background-color: white;
+        }
+      }
+    }
+
+    &-payment {
+      width: 100%;
+      padding: 39px 52px;
+      background-color: #f4f4f4;
+      margin-bottom: 80px;
+
+      input[type="checkbox"] {
+        display: none;
+      }
+
+      &-btn {
+        display: flex;
+        justify-content: space-between;
+
+        label {
+          width: 260px;
+          background-color: white;
+          height: 76px;
+          padding: 11px 19px;
+          font-weight: bold;
+        
+          input[type="radio"] {
+            display: none;
+          }
+
+          small {
+            font-size: 13px;
+            font-weight: normal;
+            color: #777777
+          }
+        }
+      }
+    }
+  }
+
+  &-product {
+    width: 400px;
+    padding: 17px 19px;
+    border: 1px solid #E2E2E2;
+
+
+    &-inform {
+      p {
+        font-size: 16px;
+        margin: 0 0 20px;
+      }
+    }
+
+    &-details {
+      display: flex;
+
+      &-description {
+        padding: 10px;
+
+        #prod {
+          font-weight: bold;
+          margin-top: 10px;
+          line-height: 20px;
+        }
+
+        #count {
+          margin-right: 16px;
+
+
+        }
+
+        label {
+          display: flex;
+          margin-top: 12px;
+
+        }
+
+        &-p {
+          font-size: 16px;
+          font-weight: bold;
+        }
+      }
+    }
+
+    &-total {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 24px;
+
+      p {
+        margin: 0;
+        font-size: 20px;
+
+      }
+    }
+  }
+
+
+}
+
+.orderNumber{
+ display: flex;
+ justify-content: space-between;
+
+  &-leftBlock{
+    width: 1030px;
+    height: 211px;
+    padding: 30px;
+    border-radius: 3px;
+    border: 1px solid #E2E2E2;
+    align-items: center;
+    margin-bottom: 12px;
+  }
+
+  &-rout{
+    display: flex;
+
+    a{
+      color: #907857;
+      margin-left: 8px;
+    }
+  }
+
+  &-rightBlock{
+    width: 300px;
+    height: 300px;
+    background-color: #f4f4f4;
+    padding: 26px 31px;
+
+    p{
+      font-size: 13px;
+    }
+
+    h2{
+      font-size: 18px;
+      font-weight: bold;
+      background-color: #FFEDCC ;
+      width: 133px;
+      height: 28px;
+      line-height: normal;
+      text-align: center;
+      margin-top: 8px;
+    }
+
+    &-delivery{
+      margin-top: 30px;
+
+      p{
+        font-size: 16px;
+        font-weight: bold;
+        margin-bottom: 12px;
+      }
+
+     li{
+      width: 235px;
+      font-size: 13px;
+      margin-bottom: 16px;
+      line-height: normal;
+     }
+    }
+  }
+
+}

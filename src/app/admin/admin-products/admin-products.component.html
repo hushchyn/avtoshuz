@@ -1,0 +1,17 @@
+<div class="categories">
+    <button type="button" [routerLink]="[ 'tyres']" [ngClass]="{'active': tyres}" (click)="tyresActive()">шини</button>
+    <button type="button" [routerLink]="[ 'wheels']" [ngClass]="{'active': wheels}" (click)="wheelsActive()" > диски</button>
+    <button type="button" [routerLink]="[ 'moto']" [ngClass]="{'active': moto}" (click)="motoActive()">мотошини</button>
+    <button type="button" [routerLink]="[ 'track']" [ngClass]="{'active': track}" (click)="trackActive()">вантажні шини </button>
+    <div class="tab-content">
+        <router-outlet></router-outlet>
+    </div>
+</div>
+
+
+  
+  
+
+
+
+

@@ -1,0 +1,93 @@
+<div class="main-container">
+    <div class="product-bread-camps">
+        <a>Головна</a>
+        <img src="assets/styles/icons/breadCampsArrow.png" width="4" alt="">
+        <a (click)="location.back()">Автомобільні шини</a>
+    </div>
+    <div class="product-cart">
+        <img src="assets/styles/images/productCart.png" alt="">
+        <div class="product-cart-center">
+            <h2>{{currentProduct?.brand.name + ' ' + currentProduct.model }}  {{currentProduct.width.param | slice:0:3}}/{{currentProduct.height.param | slice:0:2}} {{currentProduct.dia.param}} 
+            </h2>
+                <div class="product-cart-center-inStock">
+                  <img src="assets/styles/icons/inStock.svg" alt="">
+                  <p >В наявності</p>
+                </div>
+                <div class="product-cart-center-orangeBlock">
+                    <div class="product-cart-center-orangeBlock-first" >
+                        <p>{{currentProduct.price + ' грн'}}</p>
+                        <div class="product-cart-center-orangeBlock-first-count">
+                            <span class="" (click)="changeCount(currentProduct,false)">-</span>
+                            <input type="text" maxlength="3" [value]="currentProduct.orderCount">
+                            <span class="" (click)="changeCount(currentProduct,true)">+</span>
+                        </div>
+                          <button type="button" class="btnPrimary-cart" (click)="addToBasket">Купити</button>
+                    </div>
+                    <div class="product-cart-center-orangeBlock-second">
+                        <span> 
+                        <input type="checkbox">Стежити за ціною
+                        </span>
+                        <span> 
+                        <img src="assets/styles/icons/click.svg" alt="">Купити в один клік
+                        </span>
+                        <span>
+                            <img src="assets/styles/icons/like.svg" alt="">В избранное
+                        </span> 
+                    </div>
+                </div>
+
+                <div class="product-cart-center-details">
+                    <div class="product-cart-center-details-left">
+                      <p>Ширина : <span> {{ ' ' + currentProduct.width.param}}</span></p>
+                      <p>Висота : <span>{{ ' ' + currentProduct.height.param}}</span></p>
+                      <p>Діаметр : <span>{{ ' ' + currentProduct.dia.param }}</span></p>
+                    </div>
+                    <div class="product-cart-center-details-right">
+                      <p>Тип авто : <span>Легкові</span> </p>
+                      <p>Індекс скорості : <span>{{' ' + currentProduct.speed}}</span> </p>
+                      <p>Індекс нагрузки : <span>{{' ' + currentProduct.weight}}</span> </p>
+                    </div>
+                  </div>
+        </div>
+           
+        <div class="product-cart-right">
+            <div class="product-cart-right-delivery">
+                <span> <img src="assets/styles/icons/delivery.svg" alt="">Доставка
+                </span>
+                <ul>
+                    <li>Отправляем Новой Почтой, Интаймом, Мист Экспрессом и еще 6 компаниями перевозчиками</li>
+                    <li>Доставим по Украине в течении 3-4 дней на склад или на ваш адрес</li>
+                </ul>
+                <span> <img src="assets/styles/icons/payment.svg" alt="">Оплата
+                </span>
+                <ul>
+                    <li>Наличными, на карту Приват банка, наложенным платежом, на рассчетный счет</li>
+                </ul>
+                <span> <img src="assets/styles/icons/wallet.svg" alt="">Гарантия
+                </span>
+                <ul>
+                    <li>Замена заводского брака или полный возрат стоимости</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="advantages">
+    <div class="advantages-block">
+        <h4>Економно</h4>
+        <p>Працюємо напряму з Європейськими складами, виключаємо накрутку цін зі сторони посередника</p>
+    </div>
+    <div class="advantages-block">
+        <h4>Свіжі шини</h4>
+        <p>100% оригінальні шини не старші 2-ох років. Шини зберігаються в правильних умовах, що продовжує термін служби
+        </p>
+    </div>
+    <div class="advantages-block">
+        <h4>Свій склад</h4>
+        <p>Доставляємо шини в термін від 3-4 днів Відправляємо Новою поштою, Міст Експрес, Інтайм</p>
+    </div>
+    <div class="advantages-block">
+        <h4>Турбота та консультація</h4>
+        <p>Ми слідкуємо за новинами ринку, тому пропонуємо вам тільки найкращі пропозиції</p>
+    </div>
+</div>

@@ -1,0 +1,21 @@
+<div class="main-container">
+    <div class="admin d-flex align-items-start " >
+        <div class="admin-navigation">
+            <p>Кабінет admin</p>
+            <div class="admin-navigation-btn">
+                <button type="button" [ngClass]="{'btn-active': category}" [routerLink]="[ 'admin-category']"
+                    (click)="categoryActive()">Категорія</button>
+                <button type="button" [ngClass]="{'btn-active': products}" [routerLink]="[ 'admin-products']"
+                    (click)="productsActive()">Продукти</button>
+                <button type="button" [ngClass]="{'btn-active': orders}" [routerLink]="[ 'admin-orders']"
+                    (click)="ordersActive()">Замовлення </button>
+                <button type="button" [ngClass]="{'btn-active': news}" [routerLink]="[ 'admin-news']"
+                    (click)="newssActive()">Новини</button>
+            </div>
+            <button type="button" class="admin-navigation-signOut" (click)="signOut()"> Вийти з кабінету </button>
+        </div>
+        <div class="tab-content">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>
